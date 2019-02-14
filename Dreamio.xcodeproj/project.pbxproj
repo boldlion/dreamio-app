@@ -14,6 +14,10 @@
 		03B75F7C22157A290099101C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B75F7A22157A290099101C /* LaunchScreen.storyboard */; };
 		03B75F8722157A290099101C /* DreamioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B75F8622157A290099101C /* DreamioTests.swift */; };
 		03B75F9222157A290099101C /* DreamioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B75F9122157A290099101C /* DreamioUITests.swift */; };
+		03B75FA022158ED60099101C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03B75F9F22158ED60099101C /* GoogleService-Info.plist */; };
+		095B51801A730692AC56B4E2 /* Pods_DreamioUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72436E2B7BB22AC471949A7A /* Pods_DreamioUITests.framework */; };
+		5EA56E1D139B8BC3AF013A65 /* Pods_DreamioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01917543360011E9F82BE941 /* Pods_DreamioTests.framework */; };
+		BC3841ABCF94A45104A7C348 /* Pods_Dreamio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4113E1C3A608113478E2B9 /* Pods_Dreamio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01917543360011E9F82BE941 /* Pods_DreamioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03B75F6E22157A270099101C /* Dreamio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dreamio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03B75F7122157A270099101C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03B75F7322157A270099101C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,15 @@
 		03B75F8D22157A290099101C /* DreamioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03B75F9122157A290099101C /* DreamioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamioUITests.swift; sourceTree = "<group>"; };
 		03B75F9322157A290099101C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03B75F9F22158ED60099101C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3A4113E1C3A608113478E2B9 /* Pods_Dreamio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dreamio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BED637E414CCA5254B7F489 /* Pods-DreamioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DreamioTests/Pods-DreamioTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4AC8DF5DED8C774D197C09FA /* Pods-Dreamio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dreamio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dreamio/Pods-Dreamio.release.xcconfig"; sourceTree = "<group>"; };
+		72436E2B7BB22AC471949A7A /* Pods_DreamioUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamioUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		998ACB28AA82BB3C4CC43003 /* Pods-DreamioUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamioUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DreamioUITests/Pods-DreamioUITests.release.xcconfig"; sourceTree = "<group>"; };
+		ACF3286EA54183117209791B /* Pods-Dreamio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dreamio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dreamio/Pods-Dreamio.debug.xcconfig"; sourceTree = "<group>"; };
+		BA4838CB0AB864E5C7CC3571 /* Pods-DreamioUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamioUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DreamioUITests/Pods-DreamioUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C828BABB8E08313153A84259 /* Pods-DreamioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamioTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DreamioTests/Pods-DreamioTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC3841ABCF94A45104A7C348 /* Pods_Dreamio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EA56E1D139B8BC3AF013A65 /* Pods_DreamioTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				095B51801A730692AC56B4E2 /* Pods_DreamioUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +98,8 @@
 				03B75F8522157A290099101C /* DreamioTests */,
 				03B75F9022157A290099101C /* DreamioUITests */,
 				03B75F6F22157A270099101C /* Products */,
+				5982ABDC737C1EF56451CE45 /* Pods */,
+				4150B009303E1F3FCC5FF99A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +122,7 @@
 				03B75F7822157A290099101C /* Assets.xcassets */,
 				03B75F7A22157A290099101C /* LaunchScreen.storyboard */,
 				03B75F7D22157A290099101C /* Info.plist */,
+				03B75F9F22158ED60099101C /* GoogleService-Info.plist */,
 			);
 			path = Dreamio;
 			sourceTree = "<group>";
@@ -125,6 +145,29 @@
 			path = DreamioUITests;
 			sourceTree = "<group>";
 		};
+		4150B009303E1F3FCC5FF99A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A4113E1C3A608113478E2B9 /* Pods_Dreamio.framework */,
+				01917543360011E9F82BE941 /* Pods_DreamioTests.framework */,
+				72436E2B7BB22AC471949A7A /* Pods_DreamioUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5982ABDC737C1EF56451CE45 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ACF3286EA54183117209791B /* Pods-Dreamio.debug.xcconfig */,
+				4AC8DF5DED8C774D197C09FA /* Pods-Dreamio.release.xcconfig */,
+				3BED637E414CCA5254B7F489 /* Pods-DreamioTests.debug.xcconfig */,
+				C828BABB8E08313153A84259 /* Pods-DreamioTests.release.xcconfig */,
+				BA4838CB0AB864E5C7CC3571 /* Pods-DreamioUITests.debug.xcconfig */,
+				998ACB28AA82BB3C4CC43003 /* Pods-DreamioUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03B75F9622157A290099101C /* Build configuration list for PBXNativeTarget "Dreamio" */;
 			buildPhases = (
+				BA42A6FCA411A6903936916A /* [CP] Check Pods Manifest.lock */,
 				03B75F6A22157A270099101C /* Sources */,
 				03B75F6B22157A270099101C /* Frameworks */,
 				03B75F6C22157A270099101C /* Resources */,
+				9DDD82B9AD1A1C98D5B08A8A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03B75F9922157A290099101C /* Build configuration list for PBXNativeTarget "DreamioTests" */;
 			buildPhases = (
+				7431F72CEEA0B5C81E2B0792 /* [CP] Check Pods Manifest.lock */,
 				03B75F7E22157A290099101C /* Sources */,
 				03B75F7F22157A290099101C /* Frameworks */,
 				03B75F8022157A290099101C /* Resources */,
@@ -167,6 +213,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03B75F9C22157A290099101C /* Build configuration list for PBXNativeTarget "DreamioUITests" */;
 			buildPhases = (
+				FCC9208E3A8F8A477213C4CC /* [CP] Check Pods Manifest.lock */,
 				03B75F8922157A290099101C /* Sources */,
 				03B75F8A22157A290099101C /* Frameworks */,
 				03B75F8B22157A290099101C /* Resources */,
@@ -230,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03B75F7C22157A290099101C /* LaunchScreen.storyboard in Resources */,
+				03B75FA022158ED60099101C /* GoogleService-Info.plist in Resources */,
 				03B75F7922157A290099101C /* Assets.xcassets in Resources */,
 				03B75F7722157A270099101C /* Main.storyboard in Resources */,
 			);
@@ -250,6 +298,87 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7431F72CEEA0B5C81E2B0792 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DreamioTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DDD82B9AD1A1C98D5B08A8A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Dreamio/Pods-Dreamio-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dreamio/Pods-Dreamio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA42A6FCA411A6903936916A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dreamio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCC9208E3A8F8A477213C4CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DreamioUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		03B75F6A22157A270099101C /* Sources */ = {
@@ -430,15 +559,13 @@
 		};
 		03B75F9722157A290099101C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACF3286EA54183117209791B /* Pods-Dreamio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C7Z3QND73W;
 				INFOPLIST_FILE = Dreamio/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.dreamio.Dreamio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -448,15 +575,13 @@
 		};
 		03B75F9822157A290099101C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AC8DF5DED8C774D197C09FA /* Pods-Dreamio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C7Z3QND73W;
 				INFOPLIST_FILE = Dreamio/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.dreamio.Dreamio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -466,17 +591,14 @@
 		};
 		03B75F9A22157A290099101C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BED637E414CCA5254B7F489 /* Pods-DreamioTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C7Z3QND73W;
 				INFOPLIST_FILE = DreamioTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.dreamio.DreamioTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -487,17 +609,14 @@
 		};
 		03B75F9B22157A290099101C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C828BABB8E08313153A84259 /* Pods-DreamioTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C7Z3QND73W;
 				INFOPLIST_FILE = DreamioTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.dreamio.DreamioTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -508,16 +627,13 @@
 		};
 		03B75F9D22157A290099101C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA4838CB0AB864E5C7CC3571 /* Pods-DreamioUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C7Z3QND73W;
 				INFOPLIST_FILE = DreamioUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.dreamio.DreamioUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -528,16 +644,13 @@
 		};
 		03B75F9E22157A290099101C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 998ACB28AA82BB3C4CC43003 /* Pods-DreamioUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C7Z3QND73W;
 				INFOPLIST_FILE = DreamioUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.dreamio.DreamioUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
