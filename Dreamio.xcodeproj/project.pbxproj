@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03B75F7222157A270099101C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B75F7122157A270099101C /* AppDelegate.swift */; };
+		03B75F7422157A270099101C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B75F7322157A270099101C /* ViewController.swift */; };
+		03B75F7722157A270099101C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B75F7522157A270099101C /* Main.storyboard */; };
+		03B75F7922157A290099101C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03B75F7822157A290099101C /* Assets.xcassets */; };
+		03B75F7C22157A290099101C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B75F7A22157A290099101C /* LaunchScreen.storyboard */; };
+		03B75F8722157A290099101C /* DreamioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B75F8622157A290099101C /* DreamioTests.swift */; };
+		03B75F9222157A290099101C /* DreamioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B75F9122157A290099101C /* DreamioUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03B75F8322157A290099101C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03B75F6622157A270099101C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03B75F6D22157A270099101C;
+			remoteInfo = Dreamio;
+		};
+		03B75F8E22157A290099101C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03B75F6622157A270099101C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03B75F6D22157A270099101C;
+			remoteInfo = Dreamio;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03B75F6E22157A270099101C /* Dreamio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dreamio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03B75F7122157A270099101C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		03B75F7322157A270099101C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		03B75F7622157A270099101C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		03B75F7822157A290099101C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		03B75F7B22157A290099101C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		03B75F7D22157A290099101C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03B75F8222157A290099101C /* DreamioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03B75F8622157A290099101C /* DreamioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamioTests.swift; sourceTree = "<group>"; };
+		03B75F8822157A290099101C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03B75F8D22157A290099101C /* DreamioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03B75F9122157A290099101C /* DreamioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamioUITests.swift; sourceTree = "<group>"; };
+		03B75F9322157A290099101C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		03B75F6B22157A270099101C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03B75F7F22157A290099101C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03B75F8A22157A290099101C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03B75F6522157A270099101C = {
+			isa = PBXGroup;
+			children = (
+				03B75F7022157A270099101C /* Dreamio */,
+				03B75F8522157A290099101C /* DreamioTests */,
+				03B75F9022157A290099101C /* DreamioUITests */,
+				03B75F6F22157A270099101C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		03B75F6F22157A270099101C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03B75F6E22157A270099101C /* Dreamio.app */,
+				03B75F8222157A290099101C /* DreamioTests.xctest */,
+				03B75F8D22157A290099101C /* DreamioUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		03B75F7022157A270099101C /* Dreamio */ = {
+			isa = PBXGroup;
+			children = (
+				03B75F7122157A270099101C /* AppDelegate.swift */,
+				03B75F7322157A270099101C /* ViewController.swift */,
+				03B75F7522157A270099101C /* Main.storyboard */,
+				03B75F7822157A290099101C /* Assets.xcassets */,
+				03B75F7A22157A290099101C /* LaunchScreen.storyboard */,
+				03B75F7D22157A290099101C /* Info.plist */,
+			);
+			path = Dreamio;
+			sourceTree = "<group>";
+		};
+		03B75F8522157A290099101C /* DreamioTests */ = {
+			isa = PBXGroup;
+			children = (
+				03B75F8622157A290099101C /* DreamioTests.swift */,
+				03B75F8822157A290099101C /* Info.plist */,
+			);
+			path = DreamioTests;
+			sourceTree = "<group>";
+		};
+		03B75F9022157A290099101C /* DreamioUITests */ = {
+			isa = PBXGroup;
+			children = (
+				03B75F9122157A290099101C /* DreamioUITests.swift */,
+				03B75F9322157A290099101C /* Info.plist */,
+			);
+			path = DreamioUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		03B75F6D22157A270099101C /* Dreamio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03B75F9622157A290099101C /* Build configuration list for PBXNativeTarget "Dreamio" */;
+			buildPhases = (
+				03B75F6A22157A270099101C /* Sources */,
+				03B75F6B22157A270099101C /* Frameworks */,
+				03B75F6C22157A270099101C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Dreamio;
+			productName = Dreamio;
+			productReference = 03B75F6E22157A270099101C /* Dreamio.app */;
+			productType = "com.apple.product-type.application";
+		};
+		03B75F8122157A290099101C /* DreamioTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03B75F9922157A290099101C /* Build configuration list for PBXNativeTarget "DreamioTests" */;
+			buildPhases = (
+				03B75F7E22157A290099101C /* Sources */,
+				03B75F7F22157A290099101C /* Frameworks */,
+				03B75F8022157A290099101C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03B75F8422157A290099101C /* PBXTargetDependency */,
+			);
+			name = DreamioTests;
+			productName = DreamioTests;
+			productReference = 03B75F8222157A290099101C /* DreamioTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		03B75F8C22157A290099101C /* DreamioUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03B75F9C22157A290099101C /* Build configuration list for PBXNativeTarget "DreamioUITests" */;
+			buildPhases = (
+				03B75F8922157A290099101C /* Sources */,
+				03B75F8A22157A290099101C /* Frameworks */,
+				03B75F8B22157A290099101C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03B75F8F22157A290099101C /* PBXTargetDependency */,
+			);
+			name = DreamioUITests;
+			productName = DreamioUITests;
+			productReference = 03B75F8D22157A290099101C /* DreamioUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		03B75F6622157A270099101C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Bold Lion";
+				TargetAttributes = {
+					03B75F6D22157A270099101C = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					03B75F8122157A290099101C = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 03B75F6D22157A270099101C;
+					};
+					03B75F8C22157A290099101C = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 03B75F6D22157A270099101C;
+					};
+				};
+			};
+			buildConfigurationList = 03B75F6922157A270099101C /* Build configuration list for PBXProject "Dreamio" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 03B75F6522157A270099101C;
+			productRefGroup = 03B75F6F22157A270099101C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				03B75F6D22157A270099101C /* Dreamio */,
+				03B75F8122157A290099101C /* DreamioTests */,
+				03B75F8C22157A290099101C /* DreamioUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		03B75F6C22157A270099101C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03B75F7C22157A290099101C /* LaunchScreen.storyboard in Resources */,
+				03B75F7922157A290099101C /* Assets.xcassets in Resources */,
+				03B75F7722157A270099101C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03B75F8022157A290099101C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03B75F8B22157A290099101C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03B75F6A22157A270099101C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03B75F7422157A270099101C /* ViewController.swift in Sources */,
+				03B75F7222157A270099101C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03B75F7E22157A290099101C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03B75F8722157A290099101C /* DreamioTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03B75F8922157A290099101C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03B75F9222157A290099101C /* DreamioUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03B75F8422157A290099101C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03B75F6D22157A270099101C /* Dreamio */;
+			targetProxy = 03B75F8322157A290099101C /* PBXContainerItemProxy */;
+		};
+		03B75F8F22157A290099101C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03B75F6D22157A270099101C /* Dreamio */;
+			targetProxy = 03B75F8E22157A290099101C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		03B75F7522157A270099101C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03B75F7622157A270099101C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		03B75F7A22157A290099101C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03B75F7B22157A290099101C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		03B75F9422157A290099101C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		03B75F9522157A290099101C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		03B75F9722157A290099101C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C7Z3QND73W;
+				INFOPLIST_FILE = Dreamio/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.dreamio.Dreamio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		03B75F9822157A290099101C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C7Z3QND73W;
+				INFOPLIST_FILE = Dreamio/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.dreamio.Dreamio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		03B75F9A22157A290099101C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C7Z3QND73W;
+				INFOPLIST_FILE = DreamioTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.dreamio.DreamioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dreamio.app/Dreamio";
+			};
+			name = Debug;
+		};
+		03B75F9B22157A290099101C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C7Z3QND73W;
+				INFOPLIST_FILE = DreamioTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.dreamio.DreamioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dreamio.app/Dreamio";
+			};
+			name = Release;
+		};
+		03B75F9D22157A290099101C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C7Z3QND73W;
+				INFOPLIST_FILE = DreamioUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.dreamio.DreamioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Dreamio;
+			};
+			name = Debug;
+		};
+		03B75F9E22157A290099101C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C7Z3QND73W;
+				INFOPLIST_FILE = DreamioUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.dreamio.DreamioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Dreamio;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03B75F6922157A270099101C /* Build configuration list for PBXProject "Dreamio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03B75F9422157A290099101C /* Debug */,
+				03B75F9522157A290099101C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03B75F9622157A290099101C /* Build configuration list for PBXNativeTarget "Dreamio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03B75F9722157A290099101C /* Debug */,
+				03B75F9822157A290099101C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03B75F9922157A290099101C /* Build configuration list for PBXNativeTarget "DreamioTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03B75F9A22157A290099101C /* Debug */,
+				03B75F9B22157A290099101C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03B75F9C22157A290099101C /* Build configuration list for PBXNativeTarget "DreamioUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03B75F9D22157A290099101C /* Debug */,
+				03B75F9E22157A290099101C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 03B75F6622157A270099101C /* Project object */;
+}
