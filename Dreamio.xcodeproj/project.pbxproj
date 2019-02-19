@@ -7,16 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		033B345C2215A57100B25B67 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033B345B2215A57100B25B67 /* UIView+Extension.swift */; };
+		038853B52215C9E2002ED50D /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038853B42215C9E2002ED50D /* UIButton+Extension.swift */; };
+		038853B72215CFEC002ED50D /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038853B62215CFEC002ED50D /* RegisterVC.swift */; };
+		038853B92215DC0C002ED50D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038853B82215DC0C002ED50D /* UIColor+Extension.swift */; };
+		038853BB2215E477002ED50D /* LostPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038853BA2215E477002ED50D /* LostPasswordVC.swift */; };
+		0397A315221BE6FB00A0374E /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0397A314221BE6FB00A0374E /* Tabbar.storyboard */; };
 		03B75F7222157A270099101C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B75F7122157A270099101C /* AppDelegate.swift */; };
-		03B75F7422157A270099101C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B75F7322157A270099101C /* ViewController.swift */; };
-		03B75F7722157A270099101C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B75F7522157A270099101C /* Main.storyboard */; };
+		03B75F7422157A270099101C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B75F7322157A270099101C /* LoginVC.swift */; };
+		03B75F7722157A270099101C /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B75F7522157A270099101C /* Auth.storyboard */; };
 		03B75F7922157A290099101C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03B75F7822157A290099101C /* Assets.xcassets */; };
 		03B75F7C22157A290099101C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B75F7A22157A290099101C /* LaunchScreen.storyboard */; };
 		03B75F8722157A290099101C /* DreamioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B75F8622157A290099101C /* DreamioTests.swift */; };
 		03B75F9222157A290099101C /* DreamioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B75F9122157A290099101C /* DreamioUITests.swift */; };
 		03B75FA022158ED60099101C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03B75F9F22158ED60099101C /* GoogleService-Info.plist */; };
-		095B51801A730692AC56B4E2 /* Pods_DreamioUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72436E2B7BB22AC471949A7A /* Pods_DreamioUITests.framework */; };
-		5EA56E1D139B8BC3AF013A65 /* Pods_DreamioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01917543360011E9F82BE941 /* Pods_DreamioTests.framework */; };
+		03B75FA62215A82B0099101C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B75FA52215A82B0099101C /* Constants.swift */; };
+		03D02022221ACE4700554B4E /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D02021221ACE4600554B4E /* Api.swift */; };
+		03D02024221ACEBF00554B4E /* AuthApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D02023221ACEBF00554B4E /* AuthApi.swift */; };
+		03D02026221ADA7000554B4E /* UsersApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D02025221ADA7000554B4E /* UsersApi.swift */; };
+		03D02028221ADAD500554B4E /* References.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D02027221ADAD500554B4E /* References.swift */; };
 		BC3841ABCF94A45104A7C348 /* Pods_Dreamio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4113E1C3A608113478E2B9 /* Pods_Dreamio.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,10 +48,16 @@
 
 /* Begin PBXFileReference section */
 		01917543360011E9F82BE941 /* Pods_DreamioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		033B345B2215A57100B25B67 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		038853B42215C9E2002ED50D /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		038853B62215CFEC002ED50D /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		038853B82215DC0C002ED50D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		038853BA2215E477002ED50D /* LostPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostPasswordVC.swift; sourceTree = "<group>"; };
+		0397A314221BE6FB00A0374E /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
 		03B75F6E22157A270099101C /* Dreamio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dreamio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03B75F7122157A270099101C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		03B75F7322157A270099101C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		03B75F7622157A270099101C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		03B75F7322157A270099101C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		03B75F7622157A270099101C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
 		03B75F7822157A290099101C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03B75F7B22157A290099101C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03B75F7D22157A290099101C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,14 +68,15 @@
 		03B75F9122157A290099101C /* DreamioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamioUITests.swift; sourceTree = "<group>"; };
 		03B75F9322157A290099101C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03B75F9F22158ED60099101C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		03B75FA52215A82B0099101C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		03D02021221ACE4600554B4E /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		03D02023221ACEBF00554B4E /* AuthApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthApi.swift; sourceTree = "<group>"; };
+		03D02025221ADA7000554B4E /* UsersApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersApi.swift; sourceTree = "<group>"; };
+		03D02027221ADAD500554B4E /* References.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = References.swift; sourceTree = "<group>"; };
 		3A4113E1C3A608113478E2B9 /* Pods_Dreamio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dreamio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3BED637E414CCA5254B7F489 /* Pods-DreamioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DreamioTests/Pods-DreamioTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4AC8DF5DED8C774D197C09FA /* Pods-Dreamio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dreamio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dreamio/Pods-Dreamio.release.xcconfig"; sourceTree = "<group>"; };
 		72436E2B7BB22AC471949A7A /* Pods_DreamioUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamioUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		998ACB28AA82BB3C4CC43003 /* Pods-DreamioUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamioUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DreamioUITests/Pods-DreamioUITests.release.xcconfig"; sourceTree = "<group>"; };
 		ACF3286EA54183117209791B /* Pods-Dreamio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dreamio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dreamio/Pods-Dreamio.debug.xcconfig"; sourceTree = "<group>"; };
-		BA4838CB0AB864E5C7CC3571 /* Pods-DreamioUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamioUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DreamioUITests/Pods-DreamioUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		C828BABB8E08313153A84259 /* Pods-DreamioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamioTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DreamioTests/Pods-DreamioTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +92,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EA56E1D139B8BC3AF013A65 /* Pods_DreamioTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,13 +99,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				095B51801A730692AC56B4E2 /* Pods_DreamioUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		033B345A2215A55400B25B67 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				033B345B2215A57100B25B67 /* UIView+Extension.swift */,
+				038853B42215C9E2002ED50D /* UIButton+Extension.swift */,
+				038853B82215DC0C002ED50D /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		03B75F6522157A270099101C = {
 			isa = PBXGroup;
 			children = (
@@ -116,11 +140,14 @@
 		03B75F7022157A270099101C /* Dreamio */ = {
 			isa = PBXGroup;
 			children = (
-				03B75F7122157A270099101C /* AppDelegate.swift */,
-				03B75F7322157A270099101C /* ViewController.swift */,
-				03B75F7522157A270099101C /* Main.storyboard */,
+				03B75FA52215A82B0099101C /* Constants.swift */,
+				03D02020221ACE3C00554B4E /* Api */,
+				03B75FA1221592CA0099101C /* Model */,
+				03B75FA2221592D30099101C /* View */,
+				03B75FA3221592E40099101C /* Controller */,
+				03B75FA4221593110099101C /* Storyboards */,
+				033B345A2215A55400B25B67 /* Extensions */,
 				03B75F7822157A290099101C /* Assets.xcassets */,
-				03B75F7A22157A290099101C /* LaunchScreen.storyboard */,
 				03B75F7D22157A290099101C /* Info.plist */,
 				03B75F9F22158ED60099101C /* GoogleService-Info.plist */,
 			);
@@ -145,6 +172,52 @@
 			path = DreamioUITests;
 			sourceTree = "<group>";
 		};
+		03B75FA1221592CA0099101C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		03B75FA2221592D30099101C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		03B75FA3221592E40099101C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				03B75F7322157A270099101C /* LoginVC.swift */,
+				038853B62215CFEC002ED50D /* RegisterVC.swift */,
+				038853BA2215E477002ED50D /* LostPasswordVC.swift */,
+				03B75F7122157A270099101C /* AppDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		03B75FA4221593110099101C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				03B75F7A22157A290099101C /* LaunchScreen.storyboard */,
+				03B75F7522157A270099101C /* Auth.storyboard */,
+				0397A314221BE6FB00A0374E /* Tabbar.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		03D02020221ACE3C00554B4E /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				03D02021221ACE4600554B4E /* Api.swift */,
+				03D02023221ACEBF00554B4E /* AuthApi.swift */,
+				03D02025221ADA7000554B4E /* UsersApi.swift */,
+				03D02027221ADAD500554B4E /* References.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
 		4150B009303E1F3FCC5FF99A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,10 +233,6 @@
 			children = (
 				ACF3286EA54183117209791B /* Pods-Dreamio.debug.xcconfig */,
 				4AC8DF5DED8C774D197C09FA /* Pods-Dreamio.release.xcconfig */,
-				3BED637E414CCA5254B7F489 /* Pods-DreamioTests.debug.xcconfig */,
-				C828BABB8E08313153A84259 /* Pods-DreamioTests.release.xcconfig */,
-				BA4838CB0AB864E5C7CC3571 /* Pods-DreamioUITests.debug.xcconfig */,
-				998ACB28AA82BB3C4CC43003 /* Pods-DreamioUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -194,7 +263,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03B75F9922157A290099101C /* Build configuration list for PBXNativeTarget "DreamioTests" */;
 			buildPhases = (
-				7431F72CEEA0B5C81E2B0792 /* [CP] Check Pods Manifest.lock */,
 				03B75F7E22157A290099101C /* Sources */,
 				03B75F7F22157A290099101C /* Frameworks */,
 				03B75F8022157A290099101C /* Resources */,
@@ -213,7 +281,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03B75F9C22157A290099101C /* Build configuration list for PBXNativeTarget "DreamioUITests" */;
 			buildPhases = (
-				FCC9208E3A8F8A477213C4CC /* [CP] Check Pods Manifest.lock */,
 				03B75F8922157A290099101C /* Sources */,
 				03B75F8A22157A290099101C /* Frameworks */,
 				03B75F8B22157A290099101C /* Resources */,
@@ -276,10 +343,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0397A315221BE6FB00A0374E /* Tabbar.storyboard in Resources */,
 				03B75F7C22157A290099101C /* LaunchScreen.storyboard in Resources */,
 				03B75FA022158ED60099101C /* GoogleService-Info.plist in Resources */,
 				03B75F7922157A290099101C /* Assets.xcassets in Resources */,
-				03B75F7722157A270099101C /* Main.storyboard in Resources */,
+				03B75F7722157A270099101C /* Auth.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,24 +368,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7431F72CEEA0B5C81E2B0792 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DreamioTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9DDD82B9AD1A1C98D5B08A8A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -327,6 +377,8 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Dreamio/Pods-Dreamio-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -334,6 +386,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -360,24 +414,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FCC9208E3A8F8A477213C4CC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DreamioUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -385,8 +421,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03B75F7422157A270099101C /* ViewController.swift in Sources */,
+				03D02024221ACEBF00554B4E /* AuthApi.swift in Sources */,
+				03D02022221ACE4700554B4E /* Api.swift in Sources */,
+				038853B92215DC0C002ED50D /* UIColor+Extension.swift in Sources */,
+				038853B72215CFEC002ED50D /* RegisterVC.swift in Sources */,
+				038853B52215C9E2002ED50D /* UIButton+Extension.swift in Sources */,
+				033B345C2215A57100B25B67 /* UIView+Extension.swift in Sources */,
+				03D02026221ADA7000554B4E /* UsersApi.swift in Sources */,
+				03B75F7422157A270099101C /* LoginVC.swift in Sources */,
+				038853BB2215E477002ED50D /* LostPasswordVC.swift in Sources */,
+				03D02028221ADAD500554B4E /* References.swift in Sources */,
 				03B75F7222157A270099101C /* AppDelegate.swift in Sources */,
+				03B75FA62215A82B0099101C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,12 +468,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		03B75F7522157A270099101C /* Main.storyboard */ = {
+		03B75F7522157A270099101C /* Auth.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				03B75F7622157A270099101C /* Base */,
 			);
-			name = Main.storyboard;
+			name = Auth.storyboard;
 			sourceTree = "<group>";
 		};
 		03B75F7A22157A290099101C /* LaunchScreen.storyboard */ = {
@@ -492,7 +538,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -547,7 +593,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -565,7 +611,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C7Z3QND73W;
 				INFOPLIST_FILE = Dreamio/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.dreamio.Dreamio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -581,7 +630,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C7Z3QND73W;
 				INFOPLIST_FILE = Dreamio/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.dreamio.Dreamio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -591,14 +643,17 @@
 		};
 		03B75F9A22157A290099101C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3BED637E414CCA5254B7F489 /* Pods-DreamioTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C7Z3QND73W;
 				INFOPLIST_FILE = DreamioTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.dreamio.DreamioTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -609,14 +664,17 @@
 		};
 		03B75F9B22157A290099101C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C828BABB8E08313153A84259 /* Pods-DreamioTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C7Z3QND73W;
 				INFOPLIST_FILE = DreamioTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.dreamio.DreamioTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -627,13 +685,16 @@
 		};
 		03B75F9D22157A290099101C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA4838CB0AB864E5C7CC3571 /* Pods-DreamioUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C7Z3QND73W;
 				INFOPLIST_FILE = DreamioUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.dreamio.DreamioUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -644,13 +705,16 @@
 		};
 		03B75F9E22157A290099101C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 998ACB28AA82BB3C4CC43003 /* Pods-DreamioUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C7Z3QND73W;
 				INFOPLIST_FILE = DreamioUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.dreamio.DreamioUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
