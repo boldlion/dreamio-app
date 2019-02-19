@@ -25,12 +25,19 @@ class LoginVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setInitialUI()
+        isUserLogged()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setTextFieldDelegates()
         handleTextFields()
+    }
+    
+    func isUserLogged() {
+        if Api.Users.CURRENT_USER != nil {
+            performSegue(withIdentifier: Segues.LoginToTabbar, sender: nil)
+        }
     }
     
     @IBAction func loginTapped(_ sender: UIButton) {

@@ -8,9 +8,22 @@
 
 import Foundation
 import FirebaseDatabase
+import FirebaseAuth
 
 class UsersApi {
     
     let REF_USERS = Database.database().reference().child(DatabaseLocation.Users)
+    
+    //***********************************//
+    // MARK: - Get Current Logged User
+    //**********************************//
+    var CURRENT_USER: User? {
+        if let currentUser = Auth.auth().currentUser {
+            return currentUser
+        }
+        else {
+            return nil
+        }
+    }
     
 }

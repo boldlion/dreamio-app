@@ -13,6 +13,13 @@
 		038853B92215DC0C002ED50D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038853B82215DC0C002ED50D /* UIColor+Extension.swift */; };
 		038853BB2215E477002ED50D /* LostPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038853BA2215E477002ED50D /* LostPasswordVC.swift */; };
 		0397A315221BE6FB00A0374E /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0397A314221BE6FB00A0374E /* Tabbar.storyboard */; };
+		03B5BBC7221C1D810043219D /* Entries.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B5BBC6221C1D810043219D /* Entries.storyboard */; };
+		03B5BBC9221C1DC70043219D /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B5BBC8221C1DC70043219D /* Library.storyboard */; };
+		03B5BBCB221C1E0E0043219D /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B5BBCA221C1E0E0043219D /* Profile.storyboard */; };
+		03B5BBCD221C214F0043219D /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B5BBCC221C214F0043219D /* TabbarController.swift */; };
+		03B5BBCF221C25810043219D /* EntriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B5BBCE221C25810043219D /* EntriesVC.swift */; };
+		03B5BBD1221C25980043219D /* LibraryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B5BBD0221C25980043219D /* LibraryVC.swift */; };
+		03B5BBD3221C26100043219D /* ProfileTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B5BBD2221C26100043219D /* ProfileTVC.swift */; };
 		03B75F7222157A270099101C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B75F7122157A270099101C /* AppDelegate.swift */; };
 		03B75F7422157A270099101C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B75F7322157A270099101C /* LoginVC.swift */; };
 		03B75F7722157A270099101C /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B75F7522157A270099101C /* Auth.storyboard */; };
@@ -54,6 +61,13 @@
 		038853B82215DC0C002ED50D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		038853BA2215E477002ED50D /* LostPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostPasswordVC.swift; sourceTree = "<group>"; };
 		0397A314221BE6FB00A0374E /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
+		03B5BBC6221C1D810043219D /* Entries.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Entries.storyboard; sourceTree = "<group>"; };
+		03B5BBC8221C1DC70043219D /* Library.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
+		03B5BBCA221C1E0E0043219D /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		03B5BBCC221C214F0043219D /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		03B5BBCE221C25810043219D /* EntriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesVC.swift; sourceTree = "<group>"; };
+		03B5BBD0221C25980043219D /* LibraryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryVC.swift; sourceTree = "<group>"; };
+		03B5BBD2221C26100043219D /* ProfileTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTVC.swift; sourceTree = "<group>"; };
 		03B75F6E22157A270099101C /* Dreamio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dreamio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03B75F7122157A270099101C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03B75F7322157A270099101C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -190,6 +204,10 @@
 			isa = PBXGroup;
 			children = (
 				03B75F7322157A270099101C /* LoginVC.swift */,
+				03B5BBCC221C214F0043219D /* TabbarController.swift */,
+				03B5BBCE221C25810043219D /* EntriesVC.swift */,
+				03B5BBD0221C25980043219D /* LibraryVC.swift */,
+				03B5BBD2221C26100043219D /* ProfileTVC.swift */,
 				038853B62215CFEC002ED50D /* RegisterVC.swift */,
 				038853BA2215E477002ED50D /* LostPasswordVC.swift */,
 				03B75F7122157A270099101C /* AppDelegate.swift */,
@@ -203,6 +221,9 @@
 				03B75F7A22157A290099101C /* LaunchScreen.storyboard */,
 				03B75F7522157A270099101C /* Auth.storyboard */,
 				0397A314221BE6FB00A0374E /* Tabbar.storyboard */,
+				03B5BBC6221C1D810043219D /* Entries.storyboard */,
+				03B5BBC8221C1DC70043219D /* Library.storyboard */,
+				03B5BBCA221C1E0E0043219D /* Profile.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -344,8 +365,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0397A315221BE6FB00A0374E /* Tabbar.storyboard in Resources */,
+				03B5BBC7221C1D810043219D /* Entries.storyboard in Resources */,
+				03B5BBCB221C1E0E0043219D /* Profile.storyboard in Resources */,
 				03B75F7C22157A290099101C /* LaunchScreen.storyboard in Resources */,
 				03B75FA022158ED60099101C /* GoogleService-Info.plist in Resources */,
+				03B5BBC9221C1DC70043219D /* Library.storyboard in Resources */,
 				03B75F7922157A290099101C /* Assets.xcassets in Resources */,
 				03B75F7722157A270099101C /* Auth.storyboard in Resources */,
 			);
@@ -424,15 +448,19 @@
 				03D02024221ACEBF00554B4E /* AuthApi.swift in Sources */,
 				03D02022221ACE4700554B4E /* Api.swift in Sources */,
 				038853B92215DC0C002ED50D /* UIColor+Extension.swift in Sources */,
+				03B5BBCD221C214F0043219D /* TabbarController.swift in Sources */,
 				038853B72215CFEC002ED50D /* RegisterVC.swift in Sources */,
 				038853B52215C9E2002ED50D /* UIButton+Extension.swift in Sources */,
 				033B345C2215A57100B25B67 /* UIView+Extension.swift in Sources */,
 				03D02026221ADA7000554B4E /* UsersApi.swift in Sources */,
 				03B75F7422157A270099101C /* LoginVC.swift in Sources */,
+				03B5BBD3221C26100043219D /* ProfileTVC.swift in Sources */,
+				03B5BBCF221C25810043219D /* EntriesVC.swift in Sources */,
 				038853BB2215E477002ED50D /* LostPasswordVC.swift in Sources */,
 				03D02028221ADAD500554B4E /* References.swift in Sources */,
 				03B75F7222157A270099101C /* AppDelegate.swift in Sources */,
 				03B75FA62215A82B0099101C /* Constants.swift in Sources */,
+				03B5BBD1221C25980043219D /* LibraryVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
