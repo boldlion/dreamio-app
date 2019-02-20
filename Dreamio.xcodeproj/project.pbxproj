@@ -20,6 +20,10 @@
 		03B5BBCF221C25810043219D /* EntriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B5BBCE221C25810043219D /* EntriesVC.swift */; };
 		03B5BBD1221C25980043219D /* LibraryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B5BBD0221C25980043219D /* LibraryVC.swift */; };
 		03B5BBD3221C26100043219D /* ProfileTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B5BBD2221C26100043219D /* ProfileTVC.swift */; };
+		03B5BBD5221C2DEC0043219D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B5BBD4221C2DEC0043219D /* UserModel.swift */; };
+		03B5BBD7221D91250043219D /* ChangeUsernameTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B5BBD6221D91250043219D /* ChangeUsernameTVC.swift */; };
+		03B5BBD9221D91320043219D /* ChangeEmailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B5BBD8221D91320043219D /* ChangeEmailTVC.swift */; };
+		03B5BBDB221D91600043219D /* ChangePasswordTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B5BBDA221D91600043219D /* ChangePasswordTVC.swift */; };
 		03B75F7222157A270099101C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B75F7122157A270099101C /* AppDelegate.swift */; };
 		03B75F7422157A270099101C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B75F7322157A270099101C /* LoginVC.swift */; };
 		03B75F7722157A270099101C /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B75F7522157A270099101C /* Auth.storyboard */; };
@@ -68,6 +72,10 @@
 		03B5BBCE221C25810043219D /* EntriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesVC.swift; sourceTree = "<group>"; };
 		03B5BBD0221C25980043219D /* LibraryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryVC.swift; sourceTree = "<group>"; };
 		03B5BBD2221C26100043219D /* ProfileTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTVC.swift; sourceTree = "<group>"; };
+		03B5BBD4221C2DEC0043219D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		03B5BBD6221D91250043219D /* ChangeUsernameTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameTVC.swift; sourceTree = "<group>"; };
+		03B5BBD8221D91320043219D /* ChangeEmailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailTVC.swift; sourceTree = "<group>"; };
+		03B5BBDA221D91600043219D /* ChangePasswordTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordTVC.swift; sourceTree = "<group>"; };
 		03B75F6E22157A270099101C /* Dreamio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dreamio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03B75F7122157A270099101C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03B75F7322157A270099101C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -189,6 +197,7 @@
 		03B75FA1221592CA0099101C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				03B5BBD4221C2DEC0043219D /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,12 +213,15 @@
 			isa = PBXGroup;
 			children = (
 				03B75F7322157A270099101C /* LoginVC.swift */,
+				038853B62215CFEC002ED50D /* RegisterVC.swift */,
+				038853BA2215E477002ED50D /* LostPasswordVC.swift */,
 				03B5BBCC221C214F0043219D /* TabbarController.swift */,
 				03B5BBCE221C25810043219D /* EntriesVC.swift */,
 				03B5BBD0221C25980043219D /* LibraryVC.swift */,
 				03B5BBD2221C26100043219D /* ProfileTVC.swift */,
-				038853B62215CFEC002ED50D /* RegisterVC.swift */,
-				038853BA2215E477002ED50D /* LostPasswordVC.swift */,
+				03B5BBD6221D91250043219D /* ChangeUsernameTVC.swift */,
+				03B5BBDA221D91600043219D /* ChangePasswordTVC.swift */,
+				03B5BBD8221D91320043219D /* ChangeEmailTVC.swift */,
 				03B75F7122157A270099101C /* AppDelegate.swift */,
 			);
 			path = Controller;
@@ -453,14 +465,18 @@
 				038853B52215C9E2002ED50D /* UIButton+Extension.swift in Sources */,
 				033B345C2215A57100B25B67 /* UIView+Extension.swift in Sources */,
 				03D02026221ADA7000554B4E /* UsersApi.swift in Sources */,
+				03B5BBD5221C2DEC0043219D /* UserModel.swift in Sources */,
 				03B75F7422157A270099101C /* LoginVC.swift in Sources */,
 				03B5BBD3221C26100043219D /* ProfileTVC.swift in Sources */,
 				03B5BBCF221C25810043219D /* EntriesVC.swift in Sources */,
 				038853BB2215E477002ED50D /* LostPasswordVC.swift in Sources */,
 				03D02028221ADAD500554B4E /* References.swift in Sources */,
 				03B75F7222157A270099101C /* AppDelegate.swift in Sources */,
+				03B5BBD7221D91250043219D /* ChangeUsernameTVC.swift in Sources */,
+				03B5BBDB221D91600043219D /* ChangePasswordTVC.swift in Sources */,
 				03B75FA62215A82B0099101C /* Constants.swift in Sources */,
 				03B5BBD1221C25980043219D /* LibraryVC.swift in Sources */,
+				03B5BBD9221D91320043219D /* ChangeEmailTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +534,7 @@
 		03B75F9422157A290099101C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -579,6 +596,7 @@
 		03B75F9522157A290099101C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -635,6 +653,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ACF3286EA54183117209791B /* Pods-Dreamio.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C7Z3QND73W;
@@ -654,6 +673,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AC8DF5DED8C774D197C09FA /* Pods-Dreamio.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C7Z3QND73W;

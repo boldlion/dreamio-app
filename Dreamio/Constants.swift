@@ -20,4 +20,14 @@ struct Colors {
 struct Segues {
     static let LoginToTabbar = "Segue_LoginToTabbar"
     static let RegisterToTabbar = "Segue_RegisterToTabbar"
+    static let ProfileToChangeEmail = "Segue_ProfileToUpdateEmail"
+    static let ProfileToChangeUsername = "Segue_ProfileToChangeUsername"
+    static let ProfileToChangePassword = "Segue_ProfileToChangePassword"
+}
+
+struct Storyboards {
+    static let auth = "Auth"
+    static let entries = "Entries"
+    static let library = "Library"
+    static let profile = "Profile"
 }

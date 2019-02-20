@@ -24,14 +24,19 @@ class LoginVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        setInitialUI()
         isUserLogged()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        setInitialUI()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setTextFieldDelegates()
         handleTextFields()
+        loginButton.isEnabled = false
     }
     
     func isUserLogged() {
@@ -59,9 +64,8 @@ class LoginVC: UIViewController {
     func setInitialUI() {
         view.set3ColorsGradientBackground(colorOne: Colors.bgGradientColor1, colorTwo: Colors.bgGradientColor2, colorThree: Colors.bgGradientColor3)
         formBackgroundView.roundedCorners()
-        loginButton.authButton()
-        loginButton.isEnabled = false
         handleTextFields()
+        loginButton.authButton()
     }
 }
 
