@@ -7,23 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03091A692223E0DA008D4479 /* CreateNotebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03091A682223E0DA008D4479 /* CreateNotebook.swift */; };
+		03091A6B2223E2A5008D4479 /* CreateNotebookCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03091A6A2223E2A5008D4479 /* CreateNotebookCVCell.swift */; };
 		033B345C2215A57100B25B67 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033B345B2215A57100B25B67 /* UIView+Extension.swift */; };
+		0355755D222276A300B7C119 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0355755C222276A300B7C119 /* Entry.swift */; };
+		0355755F222279B300B7C119 /* NotebooksApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0355755E222279B300B7C119 /* NotebooksApi.swift */; };
+		035575612222809E00B7C119 /* UserNotebooksApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035575602222809E00B7C119 /* UserNotebooksApi.swift */; };
+		036B6C632227C88200341400 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036B6C622227C88200341400 /* UINavigationController+Extension.swift */; };
 		038853B52215C9E2002ED50D /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038853B42215C9E2002ED50D /* UIButton+Extension.swift */; };
 		038853B72215CFEC002ED50D /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038853B62215CFEC002ED50D /* RegisterVC.swift */; };
 		038853B92215DC0C002ED50D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038853B82215DC0C002ED50D /* UIColor+Extension.swift */; };
 		038853BB2215E477002ED50D /* LostPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038853BA2215E477002ED50D /* LostPasswordVC.swift */; };
 		0397A315221BE6FB00A0374E /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0397A314221BE6FB00A0374E /* Tabbar.storyboard */; };
+		03A17276222534CF00D93D87 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A17275222534CF00D93D87 /* Alerts.swift */; };
+		03A172782225563300D93D87 /* RenameNotebookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A172772225563300D93D87 /* RenameNotebookVC.swift */; };
+		03A1727A222565A200D93D87 /* UpdateNotebookCoverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A17279222565A200D93D87 /* UpdateNotebookCoverVC.swift */; };
 		03B5BBC7221C1D810043219D /* Entries.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B5BBC6221C1D810043219D /* Entries.storyboard */; };
-		03B5BBC9221C1DC70043219D /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B5BBC8221C1DC70043219D /* Library.storyboard */; };
+		03B5BBC9221C1DC70043219D /* Notebooks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B5BBC8221C1DC70043219D /* Notebooks.storyboard */; };
 		03B5BBCB221C1E0E0043219D /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B5BBCA221C1E0E0043219D /* Profile.storyboard */; };
 		03B5BBCD221C214F0043219D /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B5BBCC221C214F0043219D /* TabbarController.swift */; };
 		03B5BBCF221C25810043219D /* EntriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B5BBCE221C25810043219D /* EntriesVC.swift */; };
-		03B5BBD1221C25980043219D /* LibraryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B5BBD0221C25980043219D /* LibraryVC.swift */; };
+		03B5BBD1221C25980043219D /* NotebookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B5BBD0221C25980043219D /* NotebookVC.swift */; };
 		03B5BBD3221C26100043219D /* ProfileTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B5BBD2221C26100043219D /* ProfileTVC.swift */; };
 		03B5BBD5221C2DEC0043219D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B5BBD4221C2DEC0043219D /* UserModel.swift */; };
 		03B5BBD7221D91250043219D /* ChangeUsernameTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B5BBD6221D91250043219D /* ChangeUsernameTVC.swift */; };
 		03B5BBD9221D91320043219D /* ChangeEmailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B5BBD8221D91320043219D /* ChangeEmailTVC.swift */; };
 		03B5BBDB221D91600043219D /* ChangePasswordTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B5BBDA221D91600043219D /* ChangePasswordTVC.swift */; };
+		03B5BBDE221DD95E0043219D /* NotebookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B5BBDD221DD95E0043219D /* NotebookCell.swift */; };
+		03B5BBE0221DDB460043219D /* Notebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B5BBDF221DDB460043219D /* Notebook.swift */; };
 		03B75F7222157A270099101C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B75F7122157A270099101C /* AppDelegate.swift */; };
 		03B75F7422157A270099101C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B75F7322157A270099101C /* LoginVC.swift */; };
 		03B75F7722157A270099101C /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B75F7522157A270099101C /* Auth.storyboard */; };
@@ -37,6 +48,7 @@
 		03D02024221ACEBF00554B4E /* AuthApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D02023221ACEBF00554B4E /* AuthApi.swift */; };
 		03D02026221ADA7000554B4E /* UsersApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D02025221ADA7000554B4E /* UsersApi.swift */; };
 		03D02028221ADAD500554B4E /* References.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D02027221ADAD500554B4E /* References.swift */; };
+		03DC9C4F221EFA5B004EB0D8 /* NotebookInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC9C4E221EFA5B004EB0D8 /* NotebookInfoVC.swift */; };
 		BC3841ABCF94A45104A7C348 /* Pods_Dreamio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4113E1C3A608113478E2B9 /* Pods_Dreamio.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,23 +71,34 @@
 
 /* Begin PBXFileReference section */
 		01917543360011E9F82BE941 /* Pods_DreamioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03091A682223E0DA008D4479 /* CreateNotebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNotebook.swift; sourceTree = "<group>"; };
+		03091A6A2223E2A5008D4479 /* CreateNotebookCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNotebookCVCell.swift; sourceTree = "<group>"; };
 		033B345B2215A57100B25B67 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		0355755C222276A300B7C119 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		0355755E222279B300B7C119 /* NotebooksApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebooksApi.swift; sourceTree = "<group>"; };
+		035575602222809E00B7C119 /* UserNotebooksApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotebooksApi.swift; sourceTree = "<group>"; };
+		036B6C622227C88200341400 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		038853B42215C9E2002ED50D /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		038853B62215CFEC002ED50D /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		038853B82215DC0C002ED50D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		038853BA2215E477002ED50D /* LostPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostPasswordVC.swift; sourceTree = "<group>"; };
 		0397A314221BE6FB00A0374E /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
+		03A17275222534CF00D93D87 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		03A172772225563300D93D87 /* RenameNotebookVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameNotebookVC.swift; sourceTree = "<group>"; };
+		03A17279222565A200D93D87 /* UpdateNotebookCoverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNotebookCoverVC.swift; sourceTree = "<group>"; };
 		03B5BBC6221C1D810043219D /* Entries.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Entries.storyboard; sourceTree = "<group>"; };
-		03B5BBC8221C1DC70043219D /* Library.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
+		03B5BBC8221C1DC70043219D /* Notebooks.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notebooks.storyboard; sourceTree = "<group>"; };
 		03B5BBCA221C1E0E0043219D /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		03B5BBCC221C214F0043219D /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		03B5BBCE221C25810043219D /* EntriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesVC.swift; sourceTree = "<group>"; };
-		03B5BBD0221C25980043219D /* LibraryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryVC.swift; sourceTree = "<group>"; };
+		03B5BBD0221C25980043219D /* NotebookVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookVC.swift; sourceTree = "<group>"; };
 		03B5BBD2221C26100043219D /* ProfileTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTVC.swift; sourceTree = "<group>"; };
 		03B5BBD4221C2DEC0043219D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		03B5BBD6221D91250043219D /* ChangeUsernameTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameTVC.swift; sourceTree = "<group>"; };
 		03B5BBD8221D91320043219D /* ChangeEmailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailTVC.swift; sourceTree = "<group>"; };
 		03B5BBDA221D91600043219D /* ChangePasswordTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordTVC.swift; sourceTree = "<group>"; };
+		03B5BBDD221DD95E0043219D /* NotebookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookCell.swift; sourceTree = "<group>"; };
+		03B5BBDF221DDB460043219D /* Notebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notebook.swift; sourceTree = "<group>"; };
 		03B75F6E22157A270099101C /* Dreamio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dreamio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03B75F7122157A270099101C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03B75F7322157A270099101C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -95,6 +118,7 @@
 		03D02023221ACEBF00554B4E /* AuthApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthApi.swift; sourceTree = "<group>"; };
 		03D02025221ADA7000554B4E /* UsersApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersApi.swift; sourceTree = "<group>"; };
 		03D02027221ADAD500554B4E /* References.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = References.swift; sourceTree = "<group>"; };
+		03DC9C4E221EFA5B004EB0D8 /* NotebookInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookInfoVC.swift; sourceTree = "<group>"; };
 		3A4113E1C3A608113478E2B9 /* Pods_Dreamio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dreamio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC8DF5DED8C774D197C09FA /* Pods-Dreamio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dreamio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dreamio/Pods-Dreamio.release.xcconfig"; sourceTree = "<group>"; };
 		72436E2B7BB22AC471949A7A /* Pods_DreamioUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamioUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,8 +157,26 @@
 				033B345B2215A57100B25B67 /* UIView+Extension.swift */,
 				038853B42215C9E2002ED50D /* UIButton+Extension.swift */,
 				038853B82215DC0C002ED50D /* UIColor+Extension.swift */,
+				036B6C622227C88200341400 /* UINavigationController+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		03A17274222534BA00D93D87 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				03A17275222534CF00D93D87 /* Alerts.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		03B5BBDC221DD9410043219D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				03B5BBDD221DD95E0043219D /* NotebookCell.swift */,
+				03091A6A2223E2A5008D4479 /* CreateNotebookCVCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		03B75F6522157A270099101C = {
@@ -162,9 +204,11 @@
 		03B75F7022157A270099101C /* Dreamio */ = {
 			isa = PBXGroup;
 			children = (
+				03A17274222534BA00D93D87 /* Helpers */,
 				03B75FA52215A82B0099101C /* Constants.swift */,
 				03D02020221ACE3C00554B4E /* Api */,
 				03B75FA1221592CA0099101C /* Model */,
+				03B5BBDC221DD9410043219D /* Cells */,
 				03B75FA2221592D30099101C /* View */,
 				03B75FA3221592E40099101C /* Controller */,
 				03B75FA4221593110099101C /* Storyboards */,
@@ -198,6 +242,8 @@
 			isa = PBXGroup;
 			children = (
 				03B5BBD4221C2DEC0043219D /* UserModel.swift */,
+				03B5BBDF221DDB460043219D /* Notebook.swift */,
+				0355755C222276A300B7C119 /* Entry.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,7 +263,11 @@
 				038853BA2215E477002ED50D /* LostPasswordVC.swift */,
 				03B5BBCC221C214F0043219D /* TabbarController.swift */,
 				03B5BBCE221C25810043219D /* EntriesVC.swift */,
-				03B5BBD0221C25980043219D /* LibraryVC.swift */,
+				03B5BBD0221C25980043219D /* NotebookVC.swift */,
+				03091A682223E0DA008D4479 /* CreateNotebook.swift */,
+				03A172772225563300D93D87 /* RenameNotebookVC.swift */,
+				03A17279222565A200D93D87 /* UpdateNotebookCoverVC.swift */,
+				03DC9C4E221EFA5B004EB0D8 /* NotebookInfoVC.swift */,
 				03B5BBD2221C26100043219D /* ProfileTVC.swift */,
 				03B5BBD6221D91250043219D /* ChangeUsernameTVC.swift */,
 				03B5BBDA221D91600043219D /* ChangePasswordTVC.swift */,
@@ -234,7 +284,7 @@
 				03B75F7522157A270099101C /* Auth.storyboard */,
 				0397A314221BE6FB00A0374E /* Tabbar.storyboard */,
 				03B5BBC6221C1D810043219D /* Entries.storyboard */,
-				03B5BBC8221C1DC70043219D /* Library.storyboard */,
+				03B5BBC8221C1DC70043219D /* Notebooks.storyboard */,
 				03B5BBCA221C1E0E0043219D /* Profile.storyboard */,
 			);
 			path = Storyboards;
@@ -246,6 +296,8 @@
 				03D02021221ACE4600554B4E /* Api.swift */,
 				03D02023221ACEBF00554B4E /* AuthApi.swift */,
 				03D02025221ADA7000554B4E /* UsersApi.swift */,
+				0355755E222279B300B7C119 /* NotebooksApi.swift */,
+				035575602222809E00B7C119 /* UserNotebooksApi.swift */,
 				03D02027221ADAD500554B4E /* References.swift */,
 			);
 			path = Api;
@@ -381,7 +433,7 @@
 				03B5BBCB221C1E0E0043219D /* Profile.storyboard in Resources */,
 				03B75F7C22157A290099101C /* LaunchScreen.storyboard in Resources */,
 				03B75FA022158ED60099101C /* GoogleService-Info.plist in Resources */,
-				03B5BBC9221C1DC70043219D /* Library.storyboard in Resources */,
+				03B5BBC9221C1DC70043219D /* Notebooks.storyboard in Resources */,
 				03B75F7922157A290099101C /* Assets.xcassets in Resources */,
 				03B75F7722157A270099101C /* Auth.storyboard in Resources */,
 			);
@@ -457,25 +509,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0355755D222276A300B7C119 /* Entry.swift in Sources */,
+				03A1727A222565A200D93D87 /* UpdateNotebookCoverVC.swift in Sources */,
+				03A172782225563300D93D87 /* RenameNotebookVC.swift in Sources */,
 				03D02024221ACEBF00554B4E /* AuthApi.swift in Sources */,
 				03D02022221ACE4700554B4E /* Api.swift in Sources */,
+				03DC9C4F221EFA5B004EB0D8 /* NotebookInfoVC.swift in Sources */,
 				038853B92215DC0C002ED50D /* UIColor+Extension.swift in Sources */,
+				0355755F222279B300B7C119 /* NotebooksApi.swift in Sources */,
+				03091A692223E0DA008D4479 /* CreateNotebook.swift in Sources */,
 				03B5BBCD221C214F0043219D /* TabbarController.swift in Sources */,
 				038853B72215CFEC002ED50D /* RegisterVC.swift in Sources */,
 				038853B52215C9E2002ED50D /* UIButton+Extension.swift in Sources */,
 				033B345C2215A57100B25B67 /* UIView+Extension.swift in Sources */,
 				03D02026221ADA7000554B4E /* UsersApi.swift in Sources */,
+				03A17276222534CF00D93D87 /* Alerts.swift in Sources */,
 				03B5BBD5221C2DEC0043219D /* UserModel.swift in Sources */,
+				03B5BBE0221DDB460043219D /* Notebook.swift in Sources */,
 				03B75F7422157A270099101C /* LoginVC.swift in Sources */,
 				03B5BBD3221C26100043219D /* ProfileTVC.swift in Sources */,
 				03B5BBCF221C25810043219D /* EntriesVC.swift in Sources */,
 				038853BB2215E477002ED50D /* LostPasswordVC.swift in Sources */,
 				03D02028221ADAD500554B4E /* References.swift in Sources */,
+				03091A6B2223E2A5008D4479 /* CreateNotebookCVCell.swift in Sources */,
 				03B75F7222157A270099101C /* AppDelegate.swift in Sources */,
+				035575612222809E00B7C119 /* UserNotebooksApi.swift in Sources */,
+				03B5BBDE221DD95E0043219D /* NotebookCell.swift in Sources */,
 				03B5BBD7221D91250043219D /* ChangeUsernameTVC.swift in Sources */,
+				036B6C632227C88200341400 /* UINavigationController+Extension.swift in Sources */,
 				03B5BBDB221D91600043219D /* ChangePasswordTVC.swift in Sources */,
 				03B75FA62215A82B0099101C /* Constants.swift in Sources */,
-				03B5BBD1221C25980043219D /* LibraryVC.swift in Sources */,
+				03B5BBD1221C25980043219D /* NotebookVC.swift in Sources */,
 				03B5BBD9221D91320043219D /* ChangeEmailTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

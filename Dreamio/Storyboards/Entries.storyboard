@@ -15,7 +15,7 @@
             <objects>
                 <viewController storyboardIdentifier="EntriesVC" id="A8N-vd-oLw" customClass="EntriesVC" customModule="Dreamio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LB5-1N-Bdu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="m5l-Ik-4CG"/>
@@ -34,7 +34,7 @@
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Irc-B2-eg7">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Irc-B2-eg7">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -49,6 +49,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tabbar_entries" width="30" height="25"/>
+        <image name="tabbar_entries" width="30" height="28"/>
     </resources>
 </document>

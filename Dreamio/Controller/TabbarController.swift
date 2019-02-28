@@ -9,7 +9,7 @@
 import UIKit
 
 class TabbarController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -17,7 +17,7 @@ class TabbarController: UITabBarController {
     
     func setUI() {
         tabBar.barTintColor = .white
-        tabBar.tintColor = Colors.bgGradientColor2
+        tabBar.tintColor = Colors.purpleDarker
         tabBar.unselectedItemTintColor = .lightGray
     }
 }

@@ -18,10 +18,15 @@ class ProfileTVC: UITableViewController {
     var oldEmail = ""
     var user: UserModel!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setTextFieldDelegatesAndUserInteractionState()
         fetchCurrentUser()
+        NavBar.setGradientNavigationBar(for: navigationController)
     }
     
     func fetchCurrentUser() {

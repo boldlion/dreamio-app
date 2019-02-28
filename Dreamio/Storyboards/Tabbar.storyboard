@@ -38,10 +38,10 @@
             </objects>
             <point key="canvasLocation" x="-16" y="10"/>
         </scene>
-        <!--NavLibrary-->
+        <!--NavNotebooks-->
         <scene sceneID="kcX-P5-qHA">
             <objects>
-                <viewControllerPlaceholder storyboardName="Library" referencedIdentifier="NavLibrary" id="ykU-ji-HDQ" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Notebooks" referencedIdentifier="NavNotebooks" id="ykU-ji-HDQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" id="bUF-Dw-ROx"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOk-TN-1rj" userLabel="First Responder" sceneMemberID="firstResponder"/>
