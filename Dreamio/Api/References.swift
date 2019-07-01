@@ -10,7 +10,13 @@ import Foundation
 
 // Mark: - Firebase Database
 struct DatabaseLocation {
-    static let Users = "users"
-    static let Notebooks = "notebooks"
-    static let user_notebooks = "user_notebooks"
+    static let users             = "users"
+    static let notebooks         = "notebooks"
+    static let user_notebooks    = "user_notebooks"
+    static let entries           = "entries"
+    static let notebook_entries  = "notebook_entries"
+    static let labels            = "labels"
+    static let user_labels       = "user_labels"
+    static let entry_labels      = "entry_labels"
+    static let entries_timestamp = "entries_timestamp"
 }

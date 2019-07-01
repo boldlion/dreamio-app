@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SVProgressHUD
+import SCLAlertView
 
 class LoginVC: UIViewController {
 
@@ -22,11 +22,6 @@ class LoginVC: UIViewController {
         return .lightContent
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        isUserLogged()
-    }
-    
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         setInitialUI()
@@ -37,35 +32,31 @@ class LoginVC: UIViewController {
         setTextFieldDelegates()
         handleTextFields()
         loginButton.isEnabled = false
-    }
-    
-    func isUserLogged() {
-        if Api.Users.CURRENT_USER != nil {
-            performSegue(withIdentifier: Segues.LoginToTabbar, sender: nil)
-        }
+        loginButton.authButton()
+
     }
     
     @IBAction func loginTapped(_ sender: UIButton) {
         view.endEditing(true)
-        
-        SVProgressHUD.setDefaultMaskType(.gradient)
-        SVProgressHUD.show(withStatus: "Signing in...")
-        
+        let alert = SCLAlertView().showWait("Signing in...", subTitle: "Please wait")
         guard let email = emailTextField.text, let pass = passwordTextField.text else { return }
         
-        Api.Auth.loginWith(email: email, password: pass, onSuccess: { [unowned self] in
-            SVProgressHUD.dismiss()
-            self.performSegue(withIdentifier: Segues.LoginToTabbar, sender: nil)
-        }, onError: { error in
-            SVProgressHUD.showError(withStatus: error!)
+        Api.Auth.loginWith(email: email, password: pass, onSuccess: {
+            alert.close()
+        }, onError: {  error in
+            alert.close()
+            SCLAlertView().showError("Error", subTitle: error!)
         })
     }
     
     func setInitialUI() {
-        view.set3ColorsGradientBackground(colorOne: Colors.bgGradientColor1, colorTwo: Colors.bgGradientColor2, colorThree: Colors.bgGradientColor3)
+        view.setGradientBackground(colorOne: Colors.purpleDarker, colorTwo: Colors.purpleLight)
         formBackgroundView.roundedCorners()
         handleTextFields()
-        loginButton.authButton()
+    }
+    
+    deinit {
+        print("LoginVC deinitialised")
     }
 }
 
@@ -80,17 +71,19 @@ extension LoginVC: UITextFieldDelegate {
         emailTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
     }
-    
+
     @objc func textFieldDidChange() {
         guard let email = emailTextField.text, !email.isEmpty,
               let pass = passwordTextField.text, !pass.isEmpty
         else {
             loginButton.isEnabled = false
+            loginButton.authButton()
             return
         }
         loginButton.isEnabled = true
+        loginButton.authButton()
     }
-    
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
         case emailTextField:

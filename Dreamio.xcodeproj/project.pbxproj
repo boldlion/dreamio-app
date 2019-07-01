@@ -7,17 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03043655226C7078002EDFC4 /* CreditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03043654226C7078002EDFC4 /* CreditVC.swift */; };
+		03043657226C718A002EDFC4 /* CreditTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03043656226C718A002EDFC4 /* CreditTVCell.swift */; };
+		03043659226C7A2A002EDFC4 /* CreditWebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03043658226C7A2A002EDFC4 /* CreditWebViewVC.swift */; };
 		03091A692223E0DA008D4479 /* CreateNotebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03091A682223E0DA008D4479 /* CreateNotebook.swift */; };
 		03091A6B2223E2A5008D4479 /* CreateNotebookCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03091A6A2223E2A5008D4479 /* CreateNotebookCVCell.swift */; };
+		03266B3B223BB38900A231A2 /* LabelsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03266B3A223BB38900A231A2 /* LabelsApi.swift */; };
+		03266B3D223BB44600A231A2 /* UserLablesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03266B3C223BB44600A231A2 /* UserLablesApi.swift */; };
+		032C93A32279A51D00670B59 /* FaqVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032C93A22279A51D00670B59 /* FaqVC.swift */; };
+		032C93A52279F36E00670B59 /* AuthtenticateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032C93A42279F36E00670B59 /* AuthtenticateVC.swift */; };
 		033B345C2215A57100B25B67 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033B345B2215A57100B25B67 /* UIView+Extension.swift */; };
+		033CCF372271C7BF006E94D0 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033CCF362271C7BF006E94D0 /* SearchVC.swift */; };
+		033CCF392271CDA7006E94D0 /* LabelTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033CCF382271CDA7006E94D0 /* LabelTVC.swift */; };
+		033CCF3B2271E38D006E94D0 /* UISearchBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033CCF3A2271E38D006E94D0 /* UISearchBar+Extension.swift */; };
+		033CCF3D22721CC6006E94D0 /* SearchEntriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033CCF3C22721CC6006E94D0 /* SearchEntriesVC.swift */; };
+		033FE5542242958B007932DE /* EntryLabelsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033FE5532242958B007932DE /* EntryLabelsApi.swift */; };
 		0355755D222276A300B7C119 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0355755C222276A300B7C119 /* Entry.swift */; };
 		0355755F222279B300B7C119 /* NotebooksApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0355755E222279B300B7C119 /* NotebooksApi.swift */; };
 		035575612222809E00B7C119 /* UserNotebooksApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035575602222809E00B7C119 /* UserNotebooksApi.swift */; };
+		036AEAA122899455004F22A4 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036AEAA022899455004F22A4 /* Array+Extension.swift */; };
 		036B6C632227C88200341400 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036B6C622227C88200341400 /* UINavigationController+Extension.swift */; };
+		038607EC22296FD4008B0358 /* DropDownNotebookTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038607EB22296FD4008B0358 /* DropDownNotebookTVCell.swift */; };
+		03866E92222D901C0056492A /* NewEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03866E91222D901C0056492A /* NewEntryVC.swift */; };
+		03866E96222E91F60056492A /* EntriesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03866E95222E91F60056492A /* EntriesApi.swift */; };
+		03866E98222E94800056492A /* NotebookEntriesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03866E97222E94800056492A /* NotebookEntriesApi.swift */; };
+		03866E9A222EAF610056492A /* SelectNotebookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03866E99222EAF610056492A /* SelectNotebookVC.swift */; };
+		03866E9C222EB2090056492A /* SelectNotebookTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03866E9B222EB2090056492A /* SelectNotebookTVCell.swift */; };
 		038853B52215C9E2002ED50D /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038853B42215C9E2002ED50D /* UIButton+Extension.swift */; };
 		038853B72215CFEC002ED50D /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038853B62215CFEC002ED50D /* RegisterVC.swift */; };
 		038853B92215DC0C002ED50D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038853B82215DC0C002ED50D /* UIColor+Extension.swift */; };
 		038853BB2215E477002ED50D /* LostPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038853BA2215E477002ED50D /* LostPasswordVC.swift */; };
+		0390BED52268E22D00D972B6 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390BED42268E22D00D972B6 /* Bundle+Extension.swift */; };
 		0397A315221BE6FB00A0374E /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0397A314221BE6FB00A0374E /* Tabbar.storyboard */; };
 		03A17276222534CF00D93D87 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A17275222534CF00D93D87 /* Alerts.swift */; };
 		03A172782225563300D93D87 /* RenameNotebookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A172772225563300D93D87 /* RenameNotebookVC.swift */; };
@@ -44,11 +64,18 @@
 		03B75F9222157A290099101C /* DreamioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B75F9122157A290099101C /* DreamioUITests.swift */; };
 		03B75FA022158ED60099101C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03B75F9F22158ED60099101C /* GoogleService-Info.plist */; };
 		03B75FA62215A82B0099101C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B75FA52215A82B0099101C /* Constants.swift */; };
+		03C1F65222393B2500AC425E /* AddLabelsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C1F65122393B2500AC425E /* AddLabelsTVCell.swift */; };
+		03C2DF3A22C21A3C00528BDE /* CheckInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2DF3922C21A3C00528BDE /* CheckInternet.swift */; };
+		03C49AB722A6CF0D00F90E94 /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C49AB622A6CF0D00F90E94 /* NSAttributedString+Extension.swift */; };
+		03CEFBC1222926C6009403CC /* EntryTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CEFBC0222926C6009403CC /* EntryTVCell.swift */; };
 		03D02022221ACE4700554B4E /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D02021221ACE4600554B4E /* Api.swift */; };
 		03D02024221ACEBF00554B4E /* AuthApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D02023221ACEBF00554B4E /* AuthApi.swift */; };
 		03D02026221ADA7000554B4E /* UsersApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D02025221ADA7000554B4E /* UsersApi.swift */; };
 		03D02028221ADAD500554B4E /* References.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D02027221ADAD500554B4E /* References.swift */; };
+		03D1835D22521702000045E0 /* EntriesTimestampApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1835C22521702000045E0 /* EntriesTimestampApi.swift */; };
+		03D61D6D224A4608000FBAFA /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D61D6C224A4608000FBAFA /* UIViewController+Extension.swift */; };
 		03DC9C4F221EFA5B004EB0D8 /* NotebookInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC9C4E221EFA5B004EB0D8 /* NotebookInfoVC.swift */; };
+		03F017E22238253E0056DB53 /* LabelsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F017E12238253E0056DB53 /* LabelsVC.swift */; };
 		BC3841ABCF94A45104A7C348 /* Pods_Dreamio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4113E1C3A608113478E2B9 /* Pods_Dreamio.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,17 +98,37 @@
 
 /* Begin PBXFileReference section */
 		01917543360011E9F82BE941 /* Pods_DreamioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03043654226C7078002EDFC4 /* CreditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditVC.swift; sourceTree = "<group>"; };
+		03043656226C718A002EDFC4 /* CreditTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditTVCell.swift; sourceTree = "<group>"; };
+		03043658226C7A2A002EDFC4 /* CreditWebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditWebViewVC.swift; sourceTree = "<group>"; };
 		03091A682223E0DA008D4479 /* CreateNotebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNotebook.swift; sourceTree = "<group>"; };
 		03091A6A2223E2A5008D4479 /* CreateNotebookCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNotebookCVCell.swift; sourceTree = "<group>"; };
+		03266B3A223BB38900A231A2 /* LabelsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelsApi.swift; sourceTree = "<group>"; };
+		03266B3C223BB44600A231A2 /* UserLablesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLablesApi.swift; sourceTree = "<group>"; };
+		032C93A22279A51D00670B59 /* FaqVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqVC.swift; sourceTree = "<group>"; };
+		032C93A42279F36E00670B59 /* AuthtenticateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthtenticateVC.swift; sourceTree = "<group>"; };
 		033B345B2215A57100B25B67 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		033CCF362271C7BF006E94D0 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		033CCF382271CDA7006E94D0 /* LabelTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTVC.swift; sourceTree = "<group>"; };
+		033CCF3A2271E38D006E94D0 /* UISearchBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Extension.swift"; sourceTree = "<group>"; };
+		033CCF3C22721CC6006E94D0 /* SearchEntriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEntriesVC.swift; sourceTree = "<group>"; };
+		033FE5532242958B007932DE /* EntryLabelsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryLabelsApi.swift; sourceTree = "<group>"; };
 		0355755C222276A300B7C119 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		0355755E222279B300B7C119 /* NotebooksApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebooksApi.swift; sourceTree = "<group>"; };
 		035575602222809E00B7C119 /* UserNotebooksApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotebooksApi.swift; sourceTree = "<group>"; };
+		036AEAA022899455004F22A4 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		036B6C622227C88200341400 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
+		038607EB22296FD4008B0358 /* DropDownNotebookTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownNotebookTVCell.swift; sourceTree = "<group>"; };
+		03866E91222D901C0056492A /* NewEntryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryVC.swift; sourceTree = "<group>"; };
+		03866E95222E91F60056492A /* EntriesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesApi.swift; sourceTree = "<group>"; };
+		03866E97222E94800056492A /* NotebookEntriesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookEntriesApi.swift; sourceTree = "<group>"; };
+		03866E99222EAF610056492A /* SelectNotebookVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectNotebookVC.swift; sourceTree = "<group>"; };
+		03866E9B222EB2090056492A /* SelectNotebookTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectNotebookTVCell.swift; sourceTree = "<group>"; };
 		038853B42215C9E2002ED50D /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		038853B62215CFEC002ED50D /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		038853B82215DC0C002ED50D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		038853BA2215E477002ED50D /* LostPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostPasswordVC.swift; sourceTree = "<group>"; };
+		0390BED42268E22D00D972B6 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		0397A314221BE6FB00A0374E /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
 		03A17275222534CF00D93D87 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		03A172772225563300D93D87 /* RenameNotebookVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameNotebookVC.swift; sourceTree = "<group>"; };
@@ -114,11 +161,18 @@
 		03B75F9322157A290099101C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03B75F9F22158ED60099101C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		03B75FA52215A82B0099101C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		03C1F65122393B2500AC425E /* AddLabelsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLabelsTVCell.swift; sourceTree = "<group>"; };
+		03C2DF3922C21A3C00528BDE /* CheckInternet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInternet.swift; sourceTree = "<group>"; };
+		03C49AB622A6CF0D00F90E94 /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		03CEFBC0222926C6009403CC /* EntryTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTVCell.swift; sourceTree = "<group>"; };
 		03D02021221ACE4600554B4E /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		03D02023221ACEBF00554B4E /* AuthApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthApi.swift; sourceTree = "<group>"; };
 		03D02025221ADA7000554B4E /* UsersApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersApi.swift; sourceTree = "<group>"; };
 		03D02027221ADAD500554B4E /* References.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = References.swift; sourceTree = "<group>"; };
+		03D1835C22521702000045E0 /* EntriesTimestampApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesTimestampApi.swift; sourceTree = "<group>"; };
+		03D61D6C224A4608000FBAFA /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		03DC9C4E221EFA5B004EB0D8 /* NotebookInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookInfoVC.swift; sourceTree = "<group>"; };
+		03F017E12238253E0056DB53 /* LabelsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelsVC.swift; sourceTree = "<group>"; };
 		3A4113E1C3A608113478E2B9 /* Pods_Dreamio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dreamio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC8DF5DED8C774D197C09FA /* Pods-Dreamio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dreamio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dreamio/Pods-Dreamio.release.xcconfig"; sourceTree = "<group>"; };
 		72436E2B7BB22AC471949A7A /* Pods_DreamioUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamioUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +205,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03196E61225E46630037EAF3 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				03B75F7322157A270099101C /* LoginVC.swift */,
+				038853B62215CFEC002ED50D /* RegisterVC.swift */,
+				038853BA2215E477002ED50D /* LostPasswordVC.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		033B345A2215A55400B25B67 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +222,11 @@
 				038853B42215C9E2002ED50D /* UIButton+Extension.swift */,
 				038853B82215DC0C002ED50D /* UIColor+Extension.swift */,
 				036B6C622227C88200341400 /* UINavigationController+Extension.swift */,
+				03D61D6C224A4608000FBAFA /* UIViewController+Extension.swift */,
+				0390BED42268E22D00D972B6 /* Bundle+Extension.swift */,
+				033CCF3A2271E38D006E94D0 /* UISearchBar+Extension.swift */,
+				036AEAA022899455004F22A4 /* Array+Extension.swift */,
+				03C49AB622A6CF0D00F90E94 /* NSAttributedString+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -165,6 +234,7 @@
 		03A17274222534BA00D93D87 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				03C2DF3922C21A3C00528BDE /* CheckInternet.swift */,
 				03A17275222534CF00D93D87 /* Alerts.swift */,
 			);
 			path = Helpers;
@@ -175,6 +245,12 @@
 			children = (
 				03B5BBDD221DD95E0043219D /* NotebookCell.swift */,
 				03091A6A2223E2A5008D4479 /* CreateNotebookCVCell.swift */,
+				03CEFBC0222926C6009403CC /* EntryTVCell.swift */,
+				038607EB22296FD4008B0358 /* DropDownNotebookTVCell.swift */,
+				03866E9B222EB2090056492A /* SelectNotebookTVCell.swift */,
+				03C1F65122393B2500AC425E /* AddLabelsTVCell.swift */,
+				03043656226C718A002EDFC4 /* CreditTVCell.swift */,
+				033CCF382271CDA7006E94D0 /* LabelTVC.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -258,13 +334,15 @@
 		03B75FA3221592E40099101C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				03B75F7322157A270099101C /* LoginVC.swift */,
-				038853B62215CFEC002ED50D /* RegisterVC.swift */,
-				038853BA2215E477002ED50D /* LostPasswordVC.swift */,
-				03B5BBCC221C214F0043219D /* TabbarController.swift */,
+				03196E61225E46630037EAF3 /* Auth */,
+				032C93A42279F36E00670B59 /* AuthtenticateVC.swift */,
 				03B5BBCE221C25810043219D /* EntriesVC.swift */,
+				03B5BBCC221C214F0043219D /* TabbarController.swift */,
 				03B5BBD0221C25980043219D /* NotebookVC.swift */,
 				03091A682223E0DA008D4479 /* CreateNotebook.swift */,
+				03866E91222D901C0056492A /* NewEntryVC.swift */,
+				03F017E12238253E0056DB53 /* LabelsVC.swift */,
+				03866E99222EAF610056492A /* SelectNotebookVC.swift */,
 				03A172772225563300D93D87 /* RenameNotebookVC.swift */,
 				03A17279222565A200D93D87 /* UpdateNotebookCoverVC.swift */,
 				03DC9C4E221EFA5B004EB0D8 /* NotebookInfoVC.swift */,
@@ -272,6 +350,11 @@
 				03B5BBD6221D91250043219D /* ChangeUsernameTVC.swift */,
 				03B5BBDA221D91600043219D /* ChangePasswordTVC.swift */,
 				03B5BBD8221D91320043219D /* ChangeEmailTVC.swift */,
+				03043654226C7078002EDFC4 /* CreditVC.swift */,
+				03043658226C7A2A002EDFC4 /* CreditWebViewVC.swift */,
+				032C93A22279A51D00670B59 /* FaqVC.swift */,
+				033CCF362271C7BF006E94D0 /* SearchVC.swift */,
+				033CCF3C22721CC6006E94D0 /* SearchEntriesVC.swift */,
 				03B75F7122157A270099101C /* AppDelegate.swift */,
 			);
 			path = Controller;
@@ -298,6 +381,12 @@
 				03D02025221ADA7000554B4E /* UsersApi.swift */,
 				0355755E222279B300B7C119 /* NotebooksApi.swift */,
 				035575602222809E00B7C119 /* UserNotebooksApi.swift */,
+				03866E95222E91F60056492A /* EntriesApi.swift */,
+				03866E97222E94800056492A /* NotebookEntriesApi.swift */,
+				03266B3A223BB38900A231A2 /* LabelsApi.swift */,
+				03266B3C223BB44600A231A2 /* UserLablesApi.swift */,
+				033FE5532242958B007932DE /* EntryLabelsApi.swift */,
+				03D1835C22521702000045E0 /* EntriesTimestampApi.swift */,
 				03D02027221ADAD500554B4E /* References.swift */,
 			);
 			path = Api;
@@ -333,7 +422,7 @@
 				03B75F6A22157A270099101C /* Sources */,
 				03B75F6B22157A270099101C /* Frameworks */,
 				03B75F6C22157A270099101C /* Resources */,
-				9DDD82B9AD1A1C98D5B08A8A /* [CP] Embed Pods Frameworks */,
+				18FA1A61107694C2D5E65756 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -456,7 +545,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9DDD82B9AD1A1C98D5B08A8A /* [CP] Embed Pods Frameworks */ = {
+		18FA1A61107694C2D5E65756 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -466,7 +555,8 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/WSTagsField/WSTagsField.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -475,7 +565,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WSTagsField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -509,36 +600,63 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03D1835D22521702000045E0 /* EntriesTimestampApi.swift in Sources */,
 				0355755D222276A300B7C119 /* Entry.swift in Sources */,
 				03A1727A222565A200D93D87 /* UpdateNotebookCoverVC.swift in Sources */,
 				03A172782225563300D93D87 /* RenameNotebookVC.swift in Sources */,
 				03D02024221ACEBF00554B4E /* AuthApi.swift in Sources */,
+				03266B3D223BB44600A231A2 /* UserLablesApi.swift in Sources */,
+				03866E92222D901C0056492A /* NewEntryVC.swift in Sources */,
+				0390BED52268E22D00D972B6 /* Bundle+Extension.swift in Sources */,
+				03866E9C222EB2090056492A /* SelectNotebookTVCell.swift in Sources */,
+				033CCF3B2271E38D006E94D0 /* UISearchBar+Extension.swift in Sources */,
 				03D02022221ACE4700554B4E /* Api.swift in Sources */,
 				03DC9C4F221EFA5B004EB0D8 /* NotebookInfoVC.swift in Sources */,
 				038853B92215DC0C002ED50D /* UIColor+Extension.swift in Sources */,
 				0355755F222279B300B7C119 /* NotebooksApi.swift in Sources */,
 				03091A692223E0DA008D4479 /* CreateNotebook.swift in Sources */,
 				03B5BBCD221C214F0043219D /* TabbarController.swift in Sources */,
+				03866E9A222EAF610056492A /* SelectNotebookVC.swift in Sources */,
+				033FE5542242958B007932DE /* EntryLabelsApi.swift in Sources */,
+				03866E96222E91F60056492A /* EntriesApi.swift in Sources */,
 				038853B72215CFEC002ED50D /* RegisterVC.swift in Sources */,
 				038853B52215C9E2002ED50D /* UIButton+Extension.swift in Sources */,
+				03D61D6D224A4608000FBAFA /* UIViewController+Extension.swift in Sources */,
+				03266B3B223BB38900A231A2 /* LabelsApi.swift in Sources */,
 				033B345C2215A57100B25B67 /* UIView+Extension.swift in Sources */,
 				03D02026221ADA7000554B4E /* UsersApi.swift in Sources */,
+				03C1F65222393B2500AC425E /* AddLabelsTVCell.swift in Sources */,
+				033CCF3D22721CC6006E94D0 /* SearchEntriesVC.swift in Sources */,
 				03A17276222534CF00D93D87 /* Alerts.swift in Sources */,
 				03B5BBD5221C2DEC0043219D /* UserModel.swift in Sources */,
 				03B5BBE0221DDB460043219D /* Notebook.swift in Sources */,
+				036AEAA122899455004F22A4 /* Array+Extension.swift in Sources */,
 				03B75F7422157A270099101C /* LoginVC.swift in Sources */,
 				03B5BBD3221C26100043219D /* ProfileTVC.swift in Sources */,
 				03B5BBCF221C25810043219D /* EntriesVC.swift in Sources */,
 				038853BB2215E477002ED50D /* LostPasswordVC.swift in Sources */,
+				03866E98222E94800056492A /* NotebookEntriesApi.swift in Sources */,
 				03D02028221ADAD500554B4E /* References.swift in Sources */,
 				03091A6B2223E2A5008D4479 /* CreateNotebookCVCell.swift in Sources */,
+				038607EC22296FD4008B0358 /* DropDownNotebookTVCell.swift in Sources */,
+				032C93A52279F36E00670B59 /* AuthtenticateVC.swift in Sources */,
+				033CCF372271C7BF006E94D0 /* SearchVC.swift in Sources */,
+				03043655226C7078002EDFC4 /* CreditVC.swift in Sources */,
+				03F017E22238253E0056DB53 /* LabelsVC.swift in Sources */,
+				03043657226C718A002EDFC4 /* CreditTVCell.swift in Sources */,
+				03C2DF3A22C21A3C00528BDE /* CheckInternet.swift in Sources */,
 				03B75F7222157A270099101C /* AppDelegate.swift in Sources */,
+				033CCF392271CDA7006E94D0 /* LabelTVC.swift in Sources */,
 				035575612222809E00B7C119 /* UserNotebooksApi.swift in Sources */,
 				03B5BBDE221DD95E0043219D /* NotebookCell.swift in Sources */,
 				03B5BBD7221D91250043219D /* ChangeUsernameTVC.swift in Sources */,
 				036B6C632227C88200341400 /* UINavigationController+Extension.swift in Sources */,
 				03B5BBDB221D91600043219D /* ChangePasswordTVC.swift in Sources */,
+				03CEFBC1222926C6009403CC /* EntryTVCell.swift in Sources */,
+				032C93A32279A51D00670B59 /* FaqVC.swift in Sources */,
 				03B75FA62215A82B0099101C /* Constants.swift in Sources */,
+				03043659226C7A2A002EDFC4 /* CreditWebViewVC.swift in Sources */,
+				03C49AB722A6CF0D00F90E94 /* NSAttributedString+Extension.swift in Sources */,
 				03B5BBD1221C25980043219D /* NotebookVC.swift in Sources */,
 				03B5BBD9221D91320043219D /* ChangeEmailTVC.swift in Sources */,
 			);
@@ -719,15 +837,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C7Z3QND73W;
 				INFOPLIST_FILE = Dreamio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.dreamio.Dreamio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -739,15 +860,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C7Z3QND73W;
 				INFOPLIST_FILE = Dreamio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.dreamio.Dreamio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

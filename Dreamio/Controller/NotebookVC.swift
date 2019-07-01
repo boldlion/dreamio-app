@@ -7,14 +7,17 @@
 //
 
 import UIKit
-import SVProgressHUD
+import SCLAlertView
 
 class NotebookVC: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var notebooks = [Notebook]()
     weak var lastFlippedNotebook: NotebookCell?
+    var defaultNotebookId: String?
+    var isDefault: Bool?
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -22,27 +25,38 @@ class NotebookVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerCell()
+        collectionViewDelegates()
         fetchNotebooks()
-        NavBar.setGradientNavigationBar(for: navigationController)        
+        collectionView.isPrefetchingEnabled = true
+        NavBar.setGradientNavigationBar(for: navigationController)
+        
     }
     
     func fetchNotebooks() {
-        
-//        if notebooks.isEmpty {
-//            createNewNotebook()
-//        }
-//        else {
-            // Fetch Notebook from Database
-            notebooks.removeAll()
-            Api.User_Notebooks.fetchUserNotebooksForCurrentUser(onSuccess: { [unowned self] notebook in
-                self.notebooks.insert(notebook, at: 0)
-                self.collectionView.reloadData()
-                }, onError: { error in
-                    SVProgressHUD.showError(withStatus: error)
-            })
-      //  }
+        activityIndicator.startAnimating()
+        notebooks.removeAll()
+        Api.User_Notebooks.fetchAllNotebooksForCurrentUser(onSuccess: { [unowned self] notebooks in
+            for notebook in notebooks {
+                guard let status = notebook.isDefault else { return }
+                guard let id = notebook.id else { return }
+                if status == "yes" {
+                    self.defaultNotebookId = id
+                    self.isDefault = true
+                    self.notebooks.insert(notebook, at: 0)
+                }
+                else {
+                    self.notebooks.append(notebook)
+                }
+            }
+            self.activityIndicator.stopAnimating()
+            self.collectionView.reloadData()
+
+        }, onError: { [unowned self] errMessage in
+            self.activityIndicator.stopAnimating()
+            SCLAlertView().showError("Something went wrong...", subTitle: errMessage)
+        })
     }
+    
     @IBAction func addNewBook(_ sender: Any) {
         performSegue(withIdentifier: Segues.NotebookVCToCreateNotebook, sender: nil)
     }
@@ -70,30 +84,35 @@ class NotebookVC: UIViewController {
             destinationVC.notebookId = notebookId
         }
     }
+    
+    deinit {
+        print("NotebookVC deinit")
+    }
 }
 
 extension NotebookVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
-    func registerCell() {
+    func collectionViewDelegates() {
         collectionView.delegate = self
         collectionView.dataSource = self
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if !notebooks.isEmpty {
-            return notebooks.count
-        }
-        else {
-            return 0
-        }
+        return notebooks.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView,  cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cell_Id.notebook, for: indexPath) as! NotebookCell
         cell.notebook = notebooks[indexPath.row]
         cell.delegate = self
         cell.flipNotebookDelegate = self
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let notebookId = notebooks[indexPath.row].id else { return }
+        postNotificationForChangedNotebookWith(uid: notebookId, key: NotificationKey.notebookIdTapped)
+        tabBarController?.selectedIndex = 0
     }
 }
 
@@ -102,32 +121,120 @@ extension NotebookVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let padding: CGFloat =  40
         let collectionViewSize = collectionView.frame.size.width - padding
-        
         return CGSize(width: collectionViewSize/2, height: collectionViewSize/2 * 1.33)
     }
 }
 
 extension NotebookVC : NotebookCellDelegate {
-
-    
-    func deleteNotebook(with id: String) {
-        for notebook in notebooks {
-            guard let notebookId = notebook.id else { return }
-            if notebookId == id {
-                Alerts.showBasicAlertWithCancel(on: self, withTitle: "Delete this notebook?", message: "Once deleted we cannot retrieve it back. Are you sure you want to proceed?", action: "Yes", completion: { [unowned self] in
-                    Api.Notebooks.deleteNotebook(withId: notebookId, onSuccess: { [unowned self] in
-                        SVProgressHUD.showSuccess(withStatus: "Deleted!")
-                        for (index, notebook) in self.notebooks.enumerated() {
-                            if notebook.id == notebookId {
-                                self.notebooks.remove(at: index)
-                                self.collectionView.reloadData()
+    func setNotebookAsDefault(with notebook: Notebook) {
+        guard let selectedNotebookStatus = notebook.isDefault else { return }
+        guard let selectedNotebookId = notebook.id else { return }
+        if isDefault != nil && isDefault == true {
+            guard let previousDefaultId = defaultNotebookId else { return }
+            if previousDefaultId == selectedNotebookId {
+                if selectedNotebookStatus == "yes" {
+                    SCLAlertView().showWarning("Hold on!", subTitle: "To change the default notebook status, please set another notebook as default.")
+                }
+                else {
+                    Api.Notebooks.setAsDefaultNotebook(forNotebookId: selectedNotebookId, onSuccess: { [unowned self] in
+                        for (index, noteb) in self.notebooks.enumerated() {
+                            guard let tempNotebookId = noteb.id else { return }
+                            if selectedNotebookId == tempNotebookId {
+                                self.notebooks[index].isDefault = "yes"
+                                self.defaultNotebookId = tempNotebookId
+                                self.isDefault = true
+                                self.collectionView.performBatchUpdates({ [unowned self] in
+                                    let indexSet = IndexSet(integersIn: 0...0)
+                                    self.postNotificationWithKey(key: NotificationKey.notebookDefaultChanged)
+                                    self.collectionView.reloadSections(indexSet)
+                                })
+                            }
+                        }
+                    }, onError: { error in
+                        SCLAlertView().showError("Error", subTitle: error)
+                    })
+                }
+            }
+            else {
+                Api.Notebooks.removeDefaultNotebookStatus(forNotebookId: previousDefaultId, onSuccess: { [unowned self] in
+                    Api.Notebooks.setAsDefaultNotebook(forNotebookId: selectedNotebookId, onSuccess: { [unowned self] in
+                        for (index, noteb) in self.notebooks.enumerated() {
+                            guard let tempNotebookId = noteb.id else { return }
+                            if previousDefaultId == tempNotebookId {
+                                self.notebooks[index].isDefault = "no"
+                            }
+                            if selectedNotebookId == tempNotebookId {
+                                self.notebooks[index].isDefault = "yes"
+                                self.defaultNotebookId = tempNotebookId
+                                self.isDefault = true
+                                let moveNotebookToTheBeginning = self.notebooks.remove(at: index)
+                                self.notebooks.insert(moveNotebookToTheBeginning, at: 0)
+                                self.collectionView.performBatchUpdates({ [unowned self] in
+                                    let indexSet = IndexSet(integersIn: 0...0)
+                                    self.postNotificationWithKey(key: NotificationKey.notebookDefaultChanged)
+                                    self.collectionView.reloadSections(indexSet)
+                                })
                             }
                         }
                     }, onError: {  error in
-                        SVProgressHUD.showError(withStatus: error)
+                        SCLAlertView().showError("Error", subTitle: error)
                     })
+                }, onError: { error in
+                    SCLAlertView().showError("Error", subTitle: error)
                 })
             }
+        }
+        else {
+            Api.Notebooks.setAsDefaultNotebook(forNotebookId: selectedNotebookId, onSuccess: { [unowned self] in
+                for (index, noteb) in self.notebooks.enumerated() {
+                    guard let tempNotebookId = noteb.id else { return }
+                    if selectedNotebookId == tempNotebookId {
+                        self.notebooks[index].isDefault = "yes"
+                        self.defaultNotebookId = tempNotebookId
+                        self.isDefault = true
+                        let moveNotebookToTheBeginning = self.notebooks.remove(at: index)
+                        self.notebooks.insert(moveNotebookToTheBeginning, at: 0)
+                        self.collectionView.performBatchUpdates({ [unowned self] in
+                            let indexSet = IndexSet(integersIn: 0...0)
+                            self.postNotificationWithKey(key: NotificationKey.notebookDefaultChanged)
+                            self.collectionView.reloadSections(indexSet)
+                        })
+                    }
+                }
+            }, onError: { error in
+                SCLAlertView().showError("Error", subTitle: error)
+            })
+        }
+    }
+    
+    func deleteNotebook(with id: String) {
+        
+        if notebooks.count > 1 {
+            for (index, notebook) in notebooks.enumerated() {
+                guard let notebookId = notebook.id else { return }
+                guard let isDefault = notebook.isDefault else { return }
+            
+                if notebookId == id && isDefault == "no" {
+                    Alerts.showWarningAlertWithCancelAndCustomAction(title: "Delete Notebook?", subTitle: "Once deleted we cannot retrieve it back. Are you sure you want to proceed?", actionTitle: "Yes", action: { [unowned self] in
+                            Api.Notebooks.deleteNotebook(withId: id, onSuccess: { [unowned self] in
+                                self.notebooks.remove(at: index)
+                                self.collectionView.reloadData()
+                                self.postNotificationForDeletedNotebookWith(uid: id, key: NotificationKey.notebookDeleted)
+                                }, onError: {  error in
+                                    SCLAlertView().showError("Error", subTitle: error)
+                            })
+                        })
+                    break
+                }
+                else if notebookId == id && isDefault == "yes" {
+                    Alerts.showWarningWithOKAction(title: "Oops!", subtitle: "In order to delete your default notebook, you have to set another notebook as default first.")
+                    return
+                }
+            }
+        }
+        else {
+            SCLAlertView().showWarning("Oops!", subTitle: "In order to delete the only notebook in your library, you'd need to create another one and set it as default first.")
+            return
         }
     }
     
@@ -142,11 +249,38 @@ extension NotebookVC : NotebookCellDelegate {
     func infoForNotebook(with id: String) {
         performSegue(withIdentifier: Segues.NotebooksToNotebookInfo, sender: id)
     }
+    
+    func postNotificationWithKey(key: String) {
+        let name = Notification.Name(rawValue: key)
+        NotificationCenter.default.post(name: name, object: nil)
+    }
+    
+    func postNotificationForDeletedNotebookWith(uid: String, key : String) {
+        let name = Notification.Name(rawValue: key)
+        NotificationCenter.default.post(name: name, object: nil, userInfo: ["uid" : uid])
+    }
+    
+    func postNotificationForChangedNotebookWith(uid: String, key : String) {
+        let name = Notification.Name(rawValue: key)
+        NotificationCenter.default.post(name: name, object: nil, userInfo: ["uid" : uid])
+    }
+    
+    func postNotificationForAddedNewNotebook(key: String) {
+        let name = Notification.Name(rawValue: key)
+        NotificationCenter.default.post(name: name, object: nil)
+    }
 }
 
-extension NotebookVC: CreateNotebookDelegate, RenameNotebookVCDelegate, UpdateNotebookCoverVCDelegate {
+extension NotebookVC: RenameNotebookVCDelegate, UpdateNotebookCoverVCDelegate {
     
     func refetchNotebooks() {
+        fetchNotebooks()
+    }
+}
+
+extension NotebookVC: CreateNotebookDelegate {
+    func notebookAdded() {
+        postNotificationForAddedNewNotebook(key: NotificationKey.notebookAdded)
         fetchNotebooks()
     }
 }

@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import SVProgressHUD
+import SCLAlertView
 
-protocol UpdateNotebookCoverVCDelegate {
+protocol UpdateNotebookCoverVCDelegate: AnyObject {
     func refetchNotebooks()
 }
 class UpdateNotebookCoverVC: UIViewController {
@@ -28,7 +28,7 @@ class UpdateNotebookCoverVC: UIViewController {
         return .lightContent
     }
     
-    var delegate: UpdateNotebookCoverVCDelegate?
+    weak var delegate: UpdateNotebookCoverVCDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +43,6 @@ class UpdateNotebookCoverVC: UIViewController {
         setCollectionViewDelegates()
         collectionView.allowsMultipleSelection = false
         collectionView.contentInsetAdjustmentBehavior = .never
-
     }
     
     func fetchNotebookInfo() {
@@ -53,7 +52,7 @@ class UpdateNotebookCoverVC: UIViewController {
             self.notebookCovers = self.notebookCovers.filter({ $0 != coverStr })
             self.collectionView.reloadData()
         }, onError: { error in
-            SVProgressHUD.showError(withStatus: error)
+            SCLAlertView().showError("Something went wrong...", subTitle: error)
         })
     }
     
@@ -71,15 +70,13 @@ class UpdateNotebookCoverVC: UIViewController {
     @objc func saveTapped() {
         guard let notebookUid = notebookId else { return }
         guard let coverImageName = selectedCover else { return }
-        SVProgressHUD.showInfo(withStatus: "Saving, please wait!")
-
-       Api.Notebooks.updateNotebookCoverImage(forNotebookId: notebookUid, name: coverImageName, onSuccess: { [unowned self] in
-            SVProgressHUD.showSuccess(withStatus: "Notebook cover successfully updated!")
+        Api.Notebooks.updateNotebookCoverImage(forNotebookId: notebookUid, name: coverImageName, onSuccess: { [unowned self] in
+            SCLAlertView().showSuccess("Done!", subTitle: "Notebook cover successfully updated!")
             self.delegate?.refetchNotebooks()
             self.navigationController?.popViewController(animated: true)
-       }, onError: { error in
-            SVProgressHUD.showError(withStatus: "Select a cover please.")
-       })
+        }, onError: { error in
+            SCLAlertView().showError("Oops!", subTitle: "Select a cover please.")
+        })
     }
     
     @objc func cancelTapped() {
@@ -97,6 +94,10 @@ class UpdateNotebookCoverVC: UIViewController {
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
         collectionView.contentInset = UIEdgeInsets(top: insetY, left: insetX, bottom: insetY, right: insetX)
+    }
+    
+    deinit {
+        print("UpdateNotebookCoverVC deinit")
     }
 }
 

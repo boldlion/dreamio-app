@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SVProgressHUD
+import SCLAlertView
 
 class NotebookInfoVC: UIViewController {
 
@@ -15,7 +15,6 @@ class NotebookInfoVC: UIViewController {
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var createdOnLabel: UILabel!
-    @IBOutlet weak var lastEntryLabel: UILabel!
     @IBOutlet weak var totalEntriesLabel: UILabel!
     @IBOutlet weak var closeButton: UIButton!
     
@@ -24,6 +23,7 @@ class NotebookInfoVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchNotebookDetails()
+         setUI()
     }
     
     override func viewWillLayoutSubviews() {
@@ -38,13 +38,15 @@ class NotebookInfoVC: UIViewController {
             if let creationTime = notebook.creationDate {
                 self.createdOnLabel.text = self.convertIntToTime(number: creationTime)
             }
-            // TODO: Fetch total entries
-            self.totalEntriesLabel.text = "0"
-            //TODO: Fetch last entry date
-            self.lastEntryLabel.text = "N/A"
-            
+            Api.Notebook_Entries.fetchNotebookEntriesCount(forNotebookUid: uid, onSuccess: { [unowned self] entriesCount in
+                self.totalEntriesLabel.text = String(entriesCount)
+            }, onError: { error in
+                SCLAlertView().showError("Error", subTitle: error)
+            }, noEntries: { [unowned self] in
+                 self.totalEntriesLabel.text = "0"
+            })
         }, onError: { error in
-            SVProgressHUD.showError(withStatus: error)
+            SCLAlertView().showError("Error", subTitle: error)
         })
     }
     
@@ -55,23 +57,24 @@ class NotebookInfoVC: UIViewController {
         formatter.dateFormat = "MMM dd, YYYY"
         return formatter.string(from: date)
     }
-
     
     @IBAction func closeTapped(_ sender: UIButton) {
         dismiss(animated: true)
     }
     
     func setUI() {
-        headerView.setGradientBackground(colorOne: Colors.purpleDarker, colorTwo: Colors.purpleLight)
+        headerView.backgroundColor = Colors.purpleDarker
         headerView.clipsToBounds = true
         backgroundView.layer.cornerRadius = 10
         backgroundView.clipsToBounds = true
         
-        closeButton.layer.borderColor = Colors.purpleDarker.cgColor
+        closeButton.backgroundColor = Colors.purpleDarker
         closeButton.clipsToBounds = true
-        closeButton.layer.borderWidth = 2
         closeButton.layer.cornerRadius = 10
-        closeButton.tintColor = Colors.purpleDarker
-        
+        closeButton.tintColor = .white
+    }
+    
+    deinit {
+        print("NotebookInfoVC deinit")
     }
 }

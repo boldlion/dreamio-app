@@ -22,7 +22,6 @@ class CreateNotebookCVCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-      //  hideDimViewAndCheckmark()
         coverImageView.image = nil
     }
     
@@ -43,7 +42,6 @@ class CreateNotebookCVCell: UICollectionViewCell {
             self.dimView.layer.borderColor = Colors.purpleDarker.cgColor
             self.dimView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
         })
-
     }
     
     func setUI() {
@@ -58,5 +56,9 @@ class CreateNotebookCVCell: UICollectionViewCell {
         contentView.clipsToBounds = true
         contentView.layer.cornerRadius = 10
         contentView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
+    }
+    
+    deinit {
+        print("CreateNotebookCVCell deinitialised")
     }
 }

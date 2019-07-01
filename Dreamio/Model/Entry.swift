@@ -8,23 +8,25 @@
 
 import Foundation
 
-class Entry {
+struct Entry {
     
     var id: String?
     var title: String?
     var content: String?
     var creationDate: Int?
+    var notebookId: String?
 }
 
 
 extension Entry {
     
     static func transformEntry(dict: [String:Any], key: String) -> Entry {
-        let entry = Entry()
+        var entry = Entry()
         entry.id = key
         entry.title = dict["title"] as? String
         entry.content = dict["content"] as? String
-        entry.creationDate = dict["creation"] as? Int
+        entry.creationDate = dict["created"] as? Int
+        entry.notebookId = dict["notebookId"] as? String
         return entry
     }
     

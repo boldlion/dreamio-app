@@ -28,38 +28,54 @@ class AuthApi {
     //***********************************//
     //**** MARK: - REGISTER NEW USER
     //***********************************//
-    func registerWith(username: String, email: String, password: String, onSuccess: @escaping () -> Void, onError: @escaping (_ errorMessage: String?) -> Void)  {
-        Auth.auth().createUser(withEmail: email, password: password, completion: {
-            user, error in
-            if error != nil {
-                onError(error!.localizedDescription)
+    func registerWith(username: String, email: String, password: String, onSuccess: @escaping () -> Void, onError: @escaping (_ errorMessage: String) -> Void)  {
+        // Does the username already exist?
+         Api.Users.doesUsernameExistInDatabase(username: username, onSuccess: { [unowned self] in
+            Auth.auth().createUser(withEmail: email, password: password, completion: { [unowned self] _, error in
+                if error != nil {
+                    onError(error!.localizedDescription)
+                    return
+                }
+                if let uid = Auth.auth().currentUser?.uid {
+                    self.setUserInformation(username: username, email: email, uid: uid, onSuccess: {
+                        Api.Notebooks.createFirstNotebook(onSuccess: onSuccess, onError: onError)
+                    }, onError: onError)
+                }
+            })
+         }, onError: { message in
+                guard let errMessage = message else { return }
+                onError(errMessage)
                 return
-            }
-            if let uid = Auth.auth().currentUser?.uid {
-                self.setUserInformation(username: username, email: email, uid: uid, onSuccess: onSuccess)
-            }
-        })
+         })
     }
     
     //***********************************//
     //**** MARK: - SET USERS DATABASE
     //***********************************//
-    func setUserInformation(username: String, email: String, uid: String, onSuccess: @escaping () -> Void) {
-        Api.Users.REF_USERS.child(uid).setValue([ "username"        : username.lowercased(),
-                                                  "email"           : email,
-                                                  "profileImageUrl" : ""  ])
-        onSuccess()
+    func setUserInformation(username: String, email: String, uid: String, onSuccess: @escaping () -> Void, onError: @escaping (_ message: String) -> Void) {
+        let userDictData =  [ "username" : username.lowercased(),
+                              "email"    : email ]
+        Api.Users.REF_USERS.child(uid).setValue(userDictData, withCompletionBlock: { error, _ in
+            if error == nil {
+                onSuccess()
+            }
+            else {
+                onError(error!.localizedDescription)
+                return
+            }
+        })
     }
     
     //***********************************//
     //**** MARK: - RETRIEVE PASSWORD
     //***********************************//
-    func resetPassword(withEmail: String, onSuccess: @escaping () -> Void,  onError: @escaping (_ errorMessage: String?) -> Void) {
+    func resetPassword(withEmail: String, onSuccess: @escaping () -> Void,  onError: @escaping (_ errorMessage: String) -> Void) {
         Auth.auth().sendPasswordReset(withEmail: withEmail) { error in
             if error != nil {
                 onError(error!.localizedDescription)
                 return
-            } else {
+            }
+            else {
                 onSuccess()
             }
         }
@@ -110,7 +126,7 @@ class AuthApi {
     //***********************************//
     func updateUserPassword(email: String, currentPassword: String, newPassword: String, onError: @escaping (_ error: String) -> Void, onSuccess: @escaping () -> Void ) {
         let credential = EmailAuthProvider.credential(withEmail: email, password: currentPassword)
-        Auth.auth().currentUser?.reauthenticateAndRetrieveData(with: credential, completion: { result, error in
+        Auth.auth().currentUser?.reauthenticate(with: credential, completion: { result, error in
             if error == nil {
                 Api.Users.CURRENT_USER?.updatePassword(to: newPassword) { errror in
                     if error != nil {
@@ -129,17 +145,39 @@ class AuthApi {
         })
     }
     
+    
     //***********************************//
-    //**** MARK: - Log out
+    //**** MARK: - Re-Autheticate User
     //***********************************//
-    func logout(onSuccess: @escaping () -> Void, onError: @escaping (_ errorMessage: String?) -> Void) {
-        do {
-            try Auth.auth().signOut()
-            onSuccess()
-        }
-        catch let logoutError {
-            onError(logoutError.localizedDescription)
-            return
-        }
+    func reauthenticateUser(email: String, currentPassword: String, onError: @escaping (_ error: String) -> Void, onSuccess: @escaping () -> Void ) {
+        let credential = EmailAuthProvider.credential(withEmail: email, password: currentPassword)
+        Auth.auth().currentUser?.reauthenticate(with: credential, completion: { result, error in
+            if error == nil {
+                onSuccess()
+            }
+            else {
+                onError(error!.localizedDescription)
+                return
+            }
+        })
+    }
+    
+    
+//    //***********************************//
+//    //**** MARK: - Log out
+//    //***********************************//
+//    func logout(onSuccess: @escaping () -> Void, onError: @escaping (_ errorMessage: String) -> Void) {
+//        do {
+//            try Auth.auth().signOut()
+//            onSuccess()
+//        }
+//        catch let logoutError {
+//            onError(logoutError.localizedDescription)
+//            return
+//        }
+//    }
+    
+    deinit {
+        print("AuthApi class has been deinitialised")
     }
 }

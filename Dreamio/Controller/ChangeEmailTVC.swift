@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import SVProgressHUD
+import SCLAlertView
 
-protocol ChangeEmailTVCDelegate {
+protocol ChangeEmailTVCDelegate: AnyObject {
     func updateUserInfo()
 }
 
@@ -17,10 +17,13 @@ class ChangeEmailTVC: UITableViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     
-    var email: String?
-    var newEmail = ""
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
-    var delegate: ChangeEmailTVCDelegate?
+    var email: String?
+    
+    weak var delegate: ChangeEmailTVCDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +34,8 @@ class ChangeEmailTVC: UITableViewController {
 
     @IBAction func saveTapped(_ sender: UIButton) {
         view.endEditing(true)
+        let alert = SCLAlertView().showWait("Sending request...", subTitle: "Please, wait!")
+
         guard let emailAddress = emailTextField.text else { return }
         let trimmedEmail = emailAddress.trimmingCharacters(in: .whitespacesAndNewlines)
         
@@ -38,21 +43,30 @@ class ChangeEmailTVC: UITableViewController {
             guard let oldEmail = email else { return }
             if oldEmail != trimmedEmail {
                 Api.Auth.updateUserEmail(email: trimmedEmail, onSuccess: { [unowned self] in
+                    alert.close()
+                    self.email = trimmedEmail
                     self.delegate?.updateUserInfo()
-                    SVProgressHUD.showSuccess(withStatus: "Your email has been updated!")
+                    SCLAlertView().showSuccess("Done!", subTitle: "Your email has been updated!")
                 }, onError: { errorMessage in
-                    SVProgressHUD.showError(withStatus: errorMessage!)
+                    alert.close()
+                    SCLAlertView().showError("Oops!", subTitle: errorMessage!)
                 })
             }
             else {
-                SVProgressHUD.showInfo(withStatus: "No change has been made.")
+                alert.close()
+                SCLAlertView().showWarning("Oops!", subTitle: "You haven't made any change.")
                 return
             }
         }
         else {
-            SVProgressHUD.showError(withStatus: "Enter valid email address, please.")
+            alert.close()
+            SCLAlertView().showError("Oops!", subTitle: "Enter valid email address, please.")
             return
         }
+    }
+    
+    deinit {
+        print("ChangeEmailTVC has been deinitialised")
     }
 }
 

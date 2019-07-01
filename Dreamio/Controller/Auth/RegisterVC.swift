@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SVProgressHUD
+import SCLAlertView
 
 class RegisterVC : UIViewController {
     
@@ -17,6 +17,7 @@ class RegisterVC : UIViewController {
     @IBOutlet weak var repeatTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var registerFormBackgroundView: UIView!
+    @IBOutlet weak var privacyTextView: UITextView!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -27,6 +28,7 @@ class RegisterVC : UIViewController {
         setTextFieldsDelegate()
         registerButton.isEnabled = false
         handleTextFields()
+        registerButton.authButton()
     }
     
     override func viewWillLayoutSubviews() {
@@ -43,35 +45,47 @@ class RegisterVC : UIViewController {
         
         if password == repPass {
             view.endEditing(true)
-            SVProgressHUD.show(withStatus: "Waiting...")
+            let alert = SCLAlertView().showWait("Sending...", subTitle: "Please wait")
             
-            Api.Auth.registerWith(username: usernameTextField.text!, email : emailTextField.text!, password: password,
-                                 onSuccess: { [unowned self] in
-                                            SVProgressHUD.dismiss()
-                                            self.performSegue(withIdentifier: Segues.RegisterToTabbar, sender: nil)
-                                            },
-                                 onError:  { error in
-                                            SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.gradient)
-                                            SVProgressHUD.showError(withStatus: error!)
+            Api.Auth.registerWith(username: usernameTextField.text!, email : emailTextField.text!, password: password, onSuccess: {
+                    alert.close()
+                },
+                onError:  { error in
+                    alert.close()
+                    SCLAlertView().showError("Error", subTitle: error)
             })
         }
         else {
-            SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.gradient)
-            SVProgressHUD.showError(withStatus: "Passwords don't match. Try again.")
-            SVProgressHUD.dismiss(withDelay: 3)
+            SCLAlertView().showWarning("Passwords don't match", subTitle: "Please, try again.")
         }
     }
     
     func setupUI() {
-        view.set3ColorsGradientBackground(colorOne: Colors.bgGradientColor1, colorTwo: Colors.bgGradientColor2, colorThree: Colors.bgGradientColor3)
-        registerButton.authButton()
+        view.setGradientBackground(colorOne: Colors.purpleDarker, colorTwo: Colors.purpleLight)
         registerFormBackgroundView.roundedCorners()
+        setHyperlinks()
+    }
+    
+    func setHyperlinks() {
+        let text = privacyTextView.text ?? ""
+        let privacyPolicyPath = "https://www.dreamio.app/tos/"
+        let font = privacyTextView.font
+        let color = privacyTextView.textColor
+        let attributedPolicyString = NSAttributedString.makeHyperlink(for: privacyPolicyPath, in: text, as: "Privacy Policy")
+        privacyTextView.attributedText = attributedPolicyString
+        privacyTextView.font = font
+        privacyTextView.linkTextAttributes = [.foregroundColor: UIColor.white, .underlineStyle: NSUnderlineStyle.single.rawValue]
+        
+        privacyTextView.textColor = color
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
-
+    
+    deinit {
+        print("RegisterVC deinitialised")
+    }
 }
 
 extension RegisterVC : UITextFieldDelegate {
@@ -111,15 +125,17 @@ extension RegisterVC : UITextFieldDelegate {
     }
     
     @objc func textFieldDidChange()  {
-        guard let name = usernameTextField.text,      !name.isEmpty,
+        guard let name = usernameTextField.text,  !name.isEmpty,
               let email = emailTextField.text,    !email.isEmpty,
               let pass = passwordTextField.text,  !pass.isEmpty,
               let repPass = repeatTextField.text, !repPass.isEmpty
         else {
             registerButton.isEnabled = false
+            registerButton.authButton()
             return
         }
         registerButton.isEnabled = true
+        registerButton.authButton()
     }
     
 }

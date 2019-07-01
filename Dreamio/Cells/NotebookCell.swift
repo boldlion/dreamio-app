@@ -8,13 +8,14 @@
 
 import UIKit
 
-protocol NotebookCellDelegate: class {
+protocol NotebookCellDelegate: AnyObject {
     func deleteNotebook(with id: String)
     func changeNotebookCover(with id: String)
     func renameNotebook(with id: String)
     func infoForNotebook(with id: String)
+    func setNotebookAsDefault(with notebook: Notebook)
 }
-protocol FlipNotebookDelegate: class {
+protocol FlipNotebookDelegate: AnyObject {
     func willFlip(currentCell: NotebookCell, swipe: UISwipeGestureRecognizer.Direction)
 }
 
@@ -24,6 +25,7 @@ class NotebookCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var titleView: UIView!
     @IBOutlet weak var backView: UIView!
+    @IBOutlet weak var defaultNotebookImageView: UIImageView!
     
     @IBOutlet weak var action_coverImage: UIImageView!
     @IBOutlet weak var action_renameImage: UIImageView!
@@ -40,17 +42,24 @@ class NotebookCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setUI()
+        //setUI()
         addSwipeGestures()
-        tapGestures()
+      //  tapGestures()
+        tapGesture_changeDefaultNotebook()
+        tapGesture_info()
+        tapGesture_delete()
+        tapGesture_rename()
+        tapGesture_changeCover()
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        defaultNotebookImageView.image = UIImage(named: "icon_default_deselected")
+        coverImageView.image = UIImage()
         setUI()
     }
     
-    weak var notebook: Notebook? {
+     var notebook: Notebook? {
         didSet {
             updateView()
         }
@@ -123,11 +132,15 @@ class NotebookCell: UICollectionViewCell {
         if let coverImage = notebook?.coverImageString {
             coverImageView.image = UIImage(named: coverImage)
         }
+        
+        if let defaultNotebook = notebook?.isDefault {
+            defaultNotebookImageView.image = defaultNotebook == "yes" ? UIImage(named: "icon_default_selected") : UIImage(named: "icon_default_deselected")
+        }
     }
     
     func setUI() {
         coverImageView.clipsToBounds = true
-        backView.setGradientBackground(colorOne: Colors.purpleDarker, colorTwo: Colors.purpleLight)
+        backView.backgroundColor = Colors.purpleDarker
         backView.layer.maskedCorners =  [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
 
         layer.shadowColor = UIColor.lightGray.cgColor
@@ -141,11 +154,10 @@ class NotebookCell: UICollectionViewCell {
         contentView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
     }
     
-    func tapGestures() {
-        tapGesture_info()
-        tapGesture_delete()
-        tapGesture_rename()
-        tapGesture_changeCover()
+    func tapGesture_changeDefaultNotebook() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(changeDefaultNotebook))
+        defaultNotebookImageView.isUserInteractionEnabled = true
+        defaultNotebookImageView.addGestureRecognizer(tap)
     }
     
     func tapGesture_changeCover() {
@@ -170,6 +182,12 @@ class NotebookCell: UICollectionViewCell {
         let tap = UITapGestureRecognizer(target: self, action: #selector(deleteNotebook))
         action_deleteImage.isUserInteractionEnabled = true
         action_deleteImage.addGestureRecognizer(tap)
+    }
+    
+    @objc func changeDefaultNotebook() {
+        if let notebook = notebook {
+            delegate?.setNotebookAsDefault(with: notebook)
+        }
     }
     
     @objc func changeCover() {
@@ -197,5 +215,9 @@ class NotebookCell: UICollectionViewCell {
             showCover(options: .transitionFlipFromRight)
             delegate?.deleteNotebook(with: id)
         }
+    }
+    
+    deinit {
+        print("NotebookCell deinitialised")
     }
 }

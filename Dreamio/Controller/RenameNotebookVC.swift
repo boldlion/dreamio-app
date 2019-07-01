@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import SVProgressHUD
+import SCLAlertView
 
-protocol RenameNotebookVCDelegate {
+protocol RenameNotebookVCDelegate: AnyObject {
     func refetchNotebooks()
 }
 
@@ -21,7 +21,7 @@ class RenameNotebookVC: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     
-    var delegate: RenameNotebookVCDelegate?
+    weak var delegate: RenameNotebookVCDelegate?
     var notebookId: String?
     
     override func viewDidLoad() {
@@ -35,18 +35,25 @@ class RenameNotebookVC: UIViewController {
         setUI()
     }
     
+    func postNotificationNotebookWith(uid: String, newTitle: String) {
+        // POST NOTIFICATION
+        let name = Notification.Name(rawValue: NotificationKey.notebookRenamed)
+        let dict = ["uid" : uid, "title": newTitle]
+        NotificationCenter.default.post(name: name, object: nil, userInfo: dict)
+    }
+    
     @IBAction func saveTapped(_ sender: UIButton) {
         guard let title = titleTextField.text else { return }
         guard let id = notebookId else { return }
         view.endEditing(true)
-        SVProgressHUD.show(withStatus: "Saving....")
         if title != "" {
             Api.Notebooks.renameNotebook(withId: id, title: title, onSuccess: { [unowned self] in
-                SVProgressHUD.showSuccess(withStatus: "Notebook Successfully Renamed!")
+                SCLAlertView().showSuccess("Success!", subTitle: "Notebook Successfully Renamed!")
+                self.postNotificationNotebookWith(uid: id, newTitle: title)
                 self.delegate?.refetchNotebooks()
                 self.dismiss(animated: true)
             }, onError: { error in
-                SVProgressHUD.showError(withStatus: error)
+                SCLAlertView().showError("Error!", subTitle: error)
             })
         }
     }
@@ -60,6 +67,10 @@ class RenameNotebookVC: UIViewController {
         containerView.clipsToBounds = true
         headerView.clipsToBounds = true
         headerView.setGradientBackground(colorOne: Colors.purpleDarker, colorTwo: Colors.purpleLight)
+    }
+    
+    deinit {
+        print("RenameNotebookVC deinit")
     }
 }
 

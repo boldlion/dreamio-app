@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import SVProgressHUD
+import SCLAlertView
 
-protocol ChangeUsernameTVCDelegate {
+protocol ChangeUsernameTVCDelegate: AnyObject {
     func updateUserInfo()
 }
 
@@ -17,9 +17,13 @@ class ChangeUsernameTVC: UITableViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     var username: String?
     
-    var delegate: ChangeUsernameTVCDelegate?
+    weak var delegate: ChangeUsernameTVCDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +34,8 @@ class ChangeUsernameTVC: UITableViewController {
 
     @IBAction func saveTapped(_ sender: UIButton) {
         view.endEditing(true)
+        let alert = SCLAlertView().showWait("Sending request...", subTitle: "Please, wait!")
+        
         guard let newUsername = usernameTextField.text else { return }
         let trimmedUsername = newUsername.trimmingCharacters(in: .whitespacesAndNewlines)
         
@@ -37,24 +43,36 @@ class ChangeUsernameTVC: UITableViewController {
             guard let oldUsername = username else { return }
             if trimmedUsername != oldUsername {
                 
-                Api.Auth.updateUserUsername(username: newUsername, onSuccess: { [unowned self] in
-                    self.delegate?.updateUserInfo()
-                    SVProgressHUD.showSuccess(withStatus: "Your username was successfully updated!")
-                    }, onError: { errorMessage in
-                        SVProgressHUD.showError(withStatus: errorMessage!)
+                Api.Auth.updateUserUsername(username: newUsername,
+                    onSuccess: { [unowned self] in
+                        alert.close()
+                        self.username = newUsername
+                        self.delegate?.updateUserInfo()
+                        SCLAlertView().showSuccess("Done!", subTitle: "Your username was successfully updated!")
+                    },
+                    onError: { [unowned self] errorMessage in
+                        alert.close()
+                        SCLAlertView().showError("Error!", subTitle: errorMessage!)
                         self.usernameTextField.text = self.username
+                        return
                 })
             }
             else {
-                SVProgressHUD.showInfo(withStatus: "No change has been made.")
+                alert.close()
+                SCLAlertView().showWarning("Oops!", subTitle: "No change has been made.")
                 return
             }
         }
         else {
-            SVProgressHUD.showError(withStatus: "Enter valid username, please.")
-            self.usernameTextField.text = self.username
+            alert.close()
+            SCLAlertView().showError("Oops!", subTitle: "Enter valid username, please.")
+            self.usernameTextField.text = username
             return
         }
+    }
+    
+    deinit {
+        print("ChangeUsernameTVC deinit")
     }
 }
 

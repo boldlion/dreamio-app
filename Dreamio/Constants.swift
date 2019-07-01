@@ -7,6 +7,29 @@
 //
 
 import UIKit
+import LocalAuthentication
+
+struct SecurityCheck {
+    static func isFaceIDAvailable() -> Bool {
+        if #available(iOS 11.0, *) {
+            let context = LAContext()
+            return (context.canEvaluatePolicy(LAPolicy.deviceOwnerAuthentication, error: nil) && context.biometryType == .faceID)
+        }
+        return false
+    }
+    
+    static func isTouchIdAvailable() -> Bool {
+        if #available(iOS 11.0, *) {
+            let context = LAContext()
+            return (context.canEvaluatePolicy(LAPolicy.deviceOwnerAuthentication, error: nil) && context.biometryType == .touchID)
+        }
+        return false
+    }
+    
+    static func isPasscodeSet() -> Bool{
+        return LAContext().canEvaluatePolicy(.deviceOwnerAuthentication, error: nil)
+    }
+}
 
 struct Colors {
     static let bgGradientColor1 = UIColor.hex("#0F2027")
@@ -15,14 +38,14 @@ struct Colors {
     
     static let purpleLight = UIColor.hex("#CF74B8")
     static let purpleDarker = UIColor.hex("#8F6EC6")
+}
 
-    static let lightBlue1 = UIColor.hex("#33C8FA")
-    static let lightBlue2 = UIColor.hex("#21809E")
+struct DefaultsKeys {
+    static let faceTouchIdState = "faceTouchIdState"
+    static let passcodeState = "passcodeState"
 }
 
 struct Segues {
-    static let LoginToTabbar = "Segue_LoginToTabbar"
-    static let RegisterToTabbar = "Segue_RegisterToTabbar"
     static let ProfileToChangeEmail = "Segue_ProfileToUpdateEmail"
     static let ProfileToChangeUsername = "Segue_ProfileToChangeUsername"
     static let ProfileToChangePassword = "Segue_ProfileToChangePassword"
@@ -30,6 +53,13 @@ struct Segues {
     static let NotebookVCToCreateNotebook = "Segue_NotebookVCToCreateNotebook"
     static let NotebooksToRenameNotebookVC = "Segue_NotebooksToRenameNotebookVC"
     static let NotebookVCToUpdateNotebookCoverVC = "Segue_NotebookVCToUpdateNotebookCoverVC"
+    static let EntriesToCreateEntryVC = "Segue_EntriesToCreateEntryVC"
+    static let NewEntryToSelectNotebookVC = "Segue_NewEntryToSelectNotebookVC"
+    static let NewEntryToLabelsVC = "Segue_NewEntryToLabelsVC"
+    static let ProfileToCredit = "Segue_ProfileToCredit"
+    static let ProfileToRequestAFeature = "Segue_ProfileToRequestAFeature"
+    static let SearchVCToSearchEntriesVC = "Segue_SearchVCToSearchEntriesVC"
+    static let PasscodeVCToTabbar = "Segue_PasscodeVCToTabbar"
 }
 
 struct Storyboards {
@@ -42,10 +72,24 @@ struct Storyboards {
 struct Cell_Id {
     static let notebook = "NotebookCell"
     static let createNotebook = "CreateNotebookCVCell"
+    static let entryTVCell = "EntryTVCell"
+    static let dropDownNotebookCell = "DropDownNotebookTVCell"
+    static let selectNotebookTVCell = "SelectNotebookTVCell"
+    static let addLabelsTVCell = "AddLabelsTVCell"
+    static let creditTVCell = "CreditTVCell"
+    static let labelTVC = "LabelTVC"
 }
 
 struct NotebookCoversString {
     static let covers =  ["cover1", "cover2", "cover3", "cover4", "cover5", "cover6", "cover7", "cover8", "cover9", "cover10"]
+}
+
+struct NotificationKey {
+    static let notebookRenamed = "notebookRenamed"
+    static let notebookDeleted = "notebookDeleted"
+    static let notebookAdded   = "notebookAdded"
+    static let notebookDefaultChanged = "notebookDefaultChanged"
+    static let notebookIdTapped = "notebookIdTapped"
 }
 
 struct NavBar {

@@ -7,12 +7,16 @@
 //
 
 import UIKit
-import SVProgressHUD
+import SCLAlertView
 
 class ChangePasswordTVC: UITableViewController {
 
     @IBOutlet weak var newPasswordTextField: UITextField!
     @IBOutlet weak var oldPasswordTextField: UITextField!
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     var email: String?
     
@@ -23,7 +27,7 @@ class ChangePasswordTVC: UITableViewController {
 
     @IBAction func saveTapped(_ sender: UIButton) {
         view.endEditing(true)
-        
+        let alert = SCLAlertView().showWait("Sending request...", subTitle: "Please, wait!")
         guard let currentPassword = oldPasswordTextField.text else { return }
         guard let newPassword = newPasswordTextField.text else { return }
         let currentPassTrimmed = currentPassword.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -34,36 +38,54 @@ class ChangePasswordTVC: UITableViewController {
         if currentPassTrimmed != "" || newPassTrimmed != "" {
             if currentPassTrimmed != newPassTrimmed {
                 Api.Auth.updateUserPassword(email: email, currentPassword: currentPassword, newPassword: newPassword, onError: { error in
-                    SVProgressHUD.showError(withStatus: error)
+                    alert.close()
+                    SCLAlertView().showError("Error", subTitle: error)
                 }, onSuccess: {
-                    SVProgressHUD.showSuccess(withStatus: "Your password has been updated!")
+                    alert.close()
+                    SCLAlertView().showSuccess("Success!", subTitle: "Your password has been updated!")
                 })
             }
             else {
-                SVProgressHUD.showError(withStatus: "New password cannot be identical to current password")
+                alert.close()
+                SCLAlertView().showWarning("Hold on!", subTitle: "New password cannot be identical to current password")
                 return
             }
         }
         else {
-            SVProgressHUD.showError(withStatus: "Fill out both passwords, please.")
+            alert.close()
+            SCLAlertView().showError("Error", subTitle: "Fill out both passwords, please.")
             return
         }
     }
     
     @IBAction func forgotPasswordTapped(_ sender: UIButton) {
         guard let email = email else { return }
-        let alert = UIAlertController(title: "Reset Password", message: "Would you like us to send you an email to \(email) in order to reset your password?", preferredStyle: .actionSheet)
-        let okayAction = UIAlertAction(title: "Yes", style: .default, handler: { action in
+        view.endEditing(true)
+        
+        Alerts.showWarningWithCancelAndCustomAction(title: "Reset Password", subtitle: "Would you like us to send you an email to \(email) in order to reset your password?", customAction: {
             Api.Auth.resetPassword(withEmail: email, onSuccess: {
-                SVProgressHUD.showSuccess(withStatus: "We've sent you an email with a link to reset your password.")
+                SCLAlertView().showSuccess("Success!", subTitle: "We've sent you an email with a link to reset your password.")
             }, onError: { error in
-                SVProgressHUD.showError(withStatus: error!)
+                SCLAlertView().showError("Error", subTitle: error)
             })
-        })
-        let cancelAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
-        alert.addAction(okayAction)
-        alert.addAction(cancelAction)
-        present(alert, animated: true, completion: nil)
+        }, actionTitle: "Yes, proceed")
+        
+//        let alert = UIAlertController(title: "Reset Password", message: "Would you like us to send you an email to \(email) in order to reset your password?", preferredStyle: .actionSheet)
+//        let okayAction = UIAlertAction(title: "Yes", style: .default, handler: { action in
+//            Api.Auth.resetPassword(withEmail: email, onSuccess: {
+//                SCLAlertView().showSuccess("Success!", subTitle: "We've sent you an email with a link to reset your password.")
+//            }, onError: { error in
+//                SCLAlertView().showError("Error", subTitle: error)
+//            })
+//        })
+//        let cancelAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
+//        alert.addAction(okayAction)
+//        alert.addAction(cancelAction)
+//        present(alert, animated: true, completion: nil)
+    }
+    
+    deinit {
+        print("ChangePasswordTVC deinit")
     }
 }
 

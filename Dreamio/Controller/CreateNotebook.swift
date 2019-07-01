@@ -7,10 +7,11 @@
 //
 
 import UIKit
-import SVProgressHUD
+import SCLAlertView
 
-protocol CreateNotebookDelegate {
-    func refetchNotebooks()
+protocol CreateNotebookDelegate: class {
+//    func refetchNotebooks()
+    func notebookAdded()
 }
  
 class CreateNotebook: UIViewController {
@@ -26,7 +27,7 @@ class CreateNotebook: UIViewController {
     var selectedIndexPath: IndexPath?
     let cellScaling: CGFloat = 0.6
     
-    var delegate: CreateNotebookDelegate?
+    weak var delegate: CreateNotebookDelegate?
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -58,21 +59,19 @@ class CreateNotebook: UIViewController {
     
     @objc func saveTapped() {
         view.endEditing(true)
-        SVProgressHUD.showInfo(withStatus: "Saving, please wait!")
         guard let title = titleTextField.text else { return }
         let trimmedTitle = title.trimmingCharacters(in: .whitespacesAndNewlines)
         
         if selectedCover != "" && selectedCover != nil {
             Api.Notebooks.createNotebook(with: selectedCover!, title: trimmedTitle, onSuccess: { [unowned self] in
-                SVProgressHUD.dismiss()
-                self.delegate?.refetchNotebooks()
+                self.delegate?.notebookAdded()
                 _ = self.navigationController?.popViewController(animated: true)
             }, onError: { error in
-                SVProgressHUD.showError(withStatus: error)
+               SCLAlertView().showError("Error", subTitle: error)
             })
         }
         else {
-            SVProgressHUD.showError(withStatus: "Select a cover please.")
+            SCLAlertView().showWarning("Oops!", subTitle: "Select a cover please!")
             return
         }
     }
@@ -87,6 +86,10 @@ class CreateNotebook: UIViewController {
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
         collectionView.contentInset = UIEdgeInsets(top: insetY, left: insetX, bottom: insetY, right: insetX)
+    }
+    
+    deinit {
+        print("CreateNotebook deinit")
     }
 }
 

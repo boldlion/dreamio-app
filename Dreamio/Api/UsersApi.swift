@@ -12,15 +12,14 @@ import FirebaseAuth
 
 class UsersApi {
     
-    let REF_USERS = Database.database().reference().child(DatabaseLocation.Users)
+    let REF_USERS = Database.database().reference().child(DatabaseLocation.users)
     
     //***********************************//
-    // MARK: - Observe Current User
+    //* MARK: - Observe Current User
     //**********************************//
     func observeCurrentUser(completion: @escaping (UserModel) -> Void) {
         guard let currentUser = Auth.auth().currentUser else { return }
-        REF_USERS.child(currentUser.uid).observeSingleEvent(of: .value, with: {
-            snapshot in
+        REF_USERS.child(currentUser.uid).observeSingleEvent(of: .value, with: { snapshot in
             if let dict = snapshot.value as? [String: Any] {
                 let user = UserModel.transformUser(dict: dict, key: snapshot.key)
                 completion(user)
@@ -29,7 +28,7 @@ class UsersApi {
     }
     
     //*****************************************//
-    // MARK: - Does Username Exist In Database
+    //* MARK: - Does Username Exist In Database
     //****************************************//
     func doesUsernameExistInDatabase(username: String, onSuccess: @escaping() -> Void, onError: @escaping (_ errorMessage: String?) -> Void) {
         REF_USERS.queryOrdered(byChild: "username").queryEqual(toValue: username.lowercased()).observeSingleEvent(of: .value, with:  { snapshot in
@@ -44,27 +43,24 @@ class UsersApi {
     }
     
     //*****************************************//
-    // MARK: - Does Username Exist In Database
+    //* MARK: - Does Username Exist In Database
     //****************************************//
     func doesEmailExistInDatabase(email: String, onSuccess: @escaping() -> Void, onMatch: @escaping () -> Void) {
         REF_USERS.queryOrdered(byChild: "email").queryEqual(toValue: email).observeSingleEvent(of: .value, with:  { snapshot in
             if snapshot.exists() {
                 onMatch()
-                print("match")
                 return
             }
             else {
                 onSuccess()
-                print("success case")
             }
         })
     }
     
-    
     //***********************************//
-    // MARK: - Get Current Logged User
+    //* MARK: - Get Current Logged User
     //**********************************//
-    var CURRENT_USER: User? {
+    weak var CURRENT_USER: User? {
         if let currentUser = Auth.auth().currentUser {
             return currentUser
         }
@@ -74,12 +70,14 @@ class UsersApi {
     }
     
     //***********************************//
-    // MARK: - Reference to Current User
+    //* MARK: - Reference to Current User
     //**********************************//
-    var REF_CURRENT_USER: DatabaseReference? {
+    weak var REF_CURRENT_USER: DatabaseReference? {
         guard let currentUser = Auth.auth().currentUser else { return nil }
         return REF_USERS.child(currentUser.uid)
     }
     
-    
+    deinit {
+        print("UserApi class has been deinitialised")
+    }
 }

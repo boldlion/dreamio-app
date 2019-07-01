@@ -8,23 +8,24 @@
 
 import Foundation
 
-class Notebook {
+struct Notebook {
     
     var id: String?
     var title: String?
     var coverImageString: String?
     var creationDate: Int?
-    var isDefault: Bool?
+    var isDefault: String?
 }
 
 extension Notebook {
     
     static func transformNotebook(dict: [String: Any], key: String) -> Notebook {
-        let notebook = Notebook()
+        var notebook = Notebook()
         notebook.id = key
         notebook.title = dict["title"] as? String
         notebook.creationDate = dict["created"] as? Int
         notebook.coverImageString = dict["coverStr"] as? String
+        notebook.isDefault = dict["default"] as? String
         return notebook
     }
 }

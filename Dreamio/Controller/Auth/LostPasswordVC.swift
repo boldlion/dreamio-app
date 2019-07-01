@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SVProgressHUD
+import SCLAlertView
 
 class LostPasswordVC: UIViewController {
 
@@ -17,6 +17,7 @@ class LostPasswordVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTextFieldDelegates()
+        retrievePassButton.authButton()
     }
     
     override func viewWillLayoutSubviews() {
@@ -35,22 +36,26 @@ class LostPasswordVC: UIViewController {
     @IBAction func retrievePasswordTapped(_ sender: UIButton) {
         view.endEditing(true)
         guard let email = lostPasswordTextField.text else { return }
-        SVProgressHUD.setDefaultMaskType(.gradient)
-        SVProgressHUD.show(withStatus: "Sending...")
+        let alert = SCLAlertView().showWait("Sending...", subTitle: "Please wait")
         
-        // TODO: The DNS needs to be changed from those provided by Firebase in order to have custom emails
-        Api.Auth.resetPassword(withEmail: email, onSuccess: {
-            SVProgressHUD.showSuccess(withStatus: "Done! You check your email.")
-            self.dismiss(animated: true, completion: nil)
+        Api.Auth.resetPassword(withEmail: email, onSuccess: { [unowned self] in
+            alert.close()
+            Alerts.showSuccessWithOkay(okayAction: { [unowned self] in
+                self.dismiss(animated: true, completion: nil)
+            }, title: "Success!", subTitle: "You should receive an email with instructions to reset your password")
         }, onError: { error in
-             SVProgressHUD.showError(withStatus: error!)
+            alert.close()
+            SCLAlertView().showError("Error", subTitle: error)
         })
     }
     
     fileprivate func setUI() {
-        view.set3ColorsGradientBackground(colorOne: UIColor.hex("#0F2027"), colorTwo: UIColor.hex("#203A43"), colorThree: UIColor.hex("#2C5364"))
-        retrievePassButton.authButton()
+        view.setGradientBackground(colorOne: Colors.purpleDarker, colorTwo: Colors.purpleLight)
         handleTextField()
+    }
+    
+    deinit {
+        print("LostPasswordVC deinitialised")
     }
 }
 
@@ -74,9 +79,11 @@ extension LostPasswordVC : UITextFieldDelegate {
         guard let email = lostPasswordTextField.text, !email.isEmpty
             else {
                 retrievePassButton.isEnabled = false
+                retrievePassButton.authButton()
                 return
             }
         retrievePassButton.isEnabled = true
+        retrievePassButton.authButton()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
