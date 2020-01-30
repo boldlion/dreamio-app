@@ -84,7 +84,7 @@ class NewEntryVC: UIViewController {
             onSuccess: { [unowned self] labels in
                 self.labels = labels
                 self.createToolbar()
-            }, onNoLabels: {
+            }, onNoLabels: { [unowned self] in
                 self.labels = []
                 self.createToolbar()
             }, onError: { errorMessage in
@@ -163,12 +163,15 @@ class NewEntryVC: UIViewController {
         view.endEditing(true)
         if saveButton.isEnabled {
             
-            Alerts.showWarningWithTwoCustomActions(title: "Wait!",
-                                                   subtitle: "You haven't saved your dream entry. Tap on SAVE button or dismiss it. You can always edit your entry.",
-                                                   dismissTitle: "Dismiss",
-                                                   dismissAction: { [unowned self]  in self.clear(); self.dismiss(animated: true) },
-                                                   customAction2: {  [unowned self] in self.saveEntry() },
-                                                   action2Title: "Save")
+            Alerts.showWarningWithTwoCustomActions(title: "Wait!", subtitle: "You haven't saved your dream entry. Tap on SAVE button or dismiss it. You can always edit your entry.", dismissTitle: "Dismiss",
+                dismissAction: { [unowned self]  in
+                    self.clear()
+                    self.dismiss(animated: true)
+                },
+                customAction2: {  [unowned self] in
+                    self.saveEntry()
+                },
+                action2Title: "Save")
         }
         else {
             clear()

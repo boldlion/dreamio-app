@@ -13,7 +13,7 @@ class FaqVC: UIViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var wkWebView: WKWebView!
-    let url = URL(string: "https://www.dreamio.app/faq/")
+    let url = URL(string: "https://dreamioapp.github.io/faq.html")
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent

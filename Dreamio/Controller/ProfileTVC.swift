@@ -44,6 +44,10 @@ class ProfileTVC: UITableViewController {
      //   showRateRequest()
     }
     
+    override func viewWillLayoutSubviews() {
+        NavBar.setGradientNavigationBar(for: navigationController)
+    }
+    
     func fetchCurrentUser() {
         Api.Users.observeCurrentUser(completion: { [unowned self] userData in
             guard let email = userData.email, let username = userData.username else { return }
@@ -129,20 +133,20 @@ class ProfileTVC: UITableViewController {
         }
         if indexPath.section == 2 && indexPath.row == 1 {
             // Support
-            showMailComposeVC(with: "I need help", email: "support@dreamio.app", body: nil)
+            showMailComposeVC(with: "I need help", email: "dreamioapp@gmail.com", body: nil)
         }
         else if indexPath.section == 3 && indexPath.row == 0 {
             // Feedback Cell
-            showMailComposeVC(with: "Feedback", email: "feedback@dreamio.app", body: nil)
+            showMailComposeVC(with: "Feedback", email: "dreamioapp@gmail.com", body: nil)
         }
         else if indexPath.section == 3 && indexPath.row == 1 {
             // Report a bug cell
-            showMailComposeVC(with: "I found a bug", email: "feedback@dreamio.app", body: nil)
+            showMailComposeVC(with: "I found a bug", email: "dreamioapp@gmail.com", body: nil)
         }
         else if indexPath.section == 5 && indexPath.row == 0 {
             // Request Account Deletion
             guard let email = user.email else { return }
-            showMailComposeVC(with: "Account Deletion", email: "support@dreamio.app", body: "I would like delete my account and all of my data. \n \n My email is: \(email)")
+            showMailComposeVC(with: "Account Deletion", email: "dreamioapp@gmail.com", body: "I would like delete my account and all of my data. \n \n My email is: \(email)")
         }
     }
     
@@ -158,7 +162,7 @@ class ProfileTVC: UITableViewController {
             present(mailComposer, animated: true, completion: nil)
            
         } else {
-            SCLAlertView().showError("Hold on!", subTitle: "Since you have not configured your email in the settings app, please contact us with your request at support@dreamio.app")
+            SCLAlertView().showError("Hold on!", subTitle: "Since you have not configured your email in the Settings app, please contact us with your request at dreamioapp@gmail.com")
         }
     }
     

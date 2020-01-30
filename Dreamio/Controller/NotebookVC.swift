@@ -28,8 +28,11 @@ class NotebookVC: UIViewController {
         collectionViewDelegates()
         fetchNotebooks()
         collectionView.isPrefetchingEnabled = true
-        NavBar.setGradientNavigationBar(for: navigationController)
         
+    }
+    
+    override func viewWillLayoutSubviews() {
+        NavBar.setGradientNavigationBar(for: navigationController)
     }
     
     func fetchNotebooks() {
