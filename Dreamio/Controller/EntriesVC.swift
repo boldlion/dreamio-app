@@ -38,6 +38,10 @@ class EntriesVC: UIViewController {
         return labels
     }()
     
+    override func viewWillLayoutSubviews() {
+        NavBar.setGradientNavigationBar(for: navigationController)
+    }
+    
     // Pagination
     var fetchingMore = false
     var endReached = false
@@ -63,7 +67,7 @@ class EntriesVC: UIViewController {
         createObservers()
         let tapGestureRecognizer = UITapGestureRecognizer(target:self, action: #selector(changeNotebook))
         navigationController?.navigationBar.addGestureRecognizer(tapGestureRecognizer)
-        NavBar.setGradientNavigationBar(for: navigationController)
+       // NavBar.setGradientNavigationBar(for: navigationController)
         fetchCurrentUserNotebooks()
     }
     
