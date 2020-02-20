@@ -172,6 +172,7 @@
 		03D1835C22521702000045E0 /* EntriesTimestampApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesTimestampApi.swift; sourceTree = "<group>"; };
 		03D61D6C224A4608000FBAFA /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		03DC9C4E221EFA5B004EB0D8 /* NotebookInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookInfoVC.swift; sourceTree = "<group>"; };
+		03DD7C0623FEB2A900426E97 /* Dreamio.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Dreamio.entitlements; sourceTree = "<group>"; };
 		03F017E12238253E0056DB53 /* LabelsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelsVC.swift; sourceTree = "<group>"; };
 		3A4113E1C3A608113478E2B9 /* Pods_Dreamio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dreamio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC8DF5DED8C774D197C09FA /* Pods-Dreamio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dreamio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dreamio/Pods-Dreamio.release.xcconfig"; sourceTree = "<group>"; };
@@ -280,6 +281,7 @@
 		03B75F7022157A270099101C /* Dreamio */ = {
 			isa = PBXGroup;
 			children = (
+				03DD7C0623FEB2A900426E97 /* Dreamio.entitlements */,
 				03A17274222534BA00D93D87 /* Helpers */,
 				03B75FA52215A82B0099101C /* Constants.swift */,
 				03D02020221ACE3C00554B4E /* Api */,
